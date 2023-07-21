@@ -1,0 +1,35 @@
+---
+const { title, img, desc, url, badge, tags, target = "_blank" } = Astro.props;
+import { Image } from "@astrojs/image/components";
+---
+
+<div class="rounded-lg bg-white hover:shadow-xl transition ease-in-out hover:scale-[102%] m-10">
+  <a href={url} target={target}>
+    <div class="flex flex-col">
+      <div class="relative w-full">
+        {img && (
+          <Image
+            src={img}
+            width={720}
+            aspectRatio={16 / 9}
+            format="png"
+            alt={title}
+            class=" w-full h-full object-cover"
+          />
+        )}
+      </div>
+      <div class="p-4">
+        <h1 class="text-xl font-bold">
+          {title}
+          {badge && <div class="badge badge-secondary mx-2">{badge}</div>}
+        </h1>
+        <p class="py-1 text-1xl">{desc}</p>
+        <div class="flex justify-end">
+          {tags &&
+            tags.map((tag) => <div class="badge badge-outline">{tag}</div>)}
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+

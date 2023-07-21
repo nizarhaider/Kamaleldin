@@ -1,0 +1,35 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import SideBar from "../components/SideBar.astro";
+
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+
+const { image, title = SITE_TITLE, description = SITE_DESCRIPTION, includeSidebar = true, expandFooter=true, sideBarActiveItemID, changeColour=false } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" data-theme="lofi">
+  <head>
+    <BaseHead title={title} description={description} image={image} />
+  </head>
+  <body>
+    
+    <div class=" drawer lg:drawer-open">
+      
+      <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+      <div class="drawer-content " >
+        <Header title={SITE_TITLE} /> 
+        <div class="w-full ">
+          <main class=" ">
+            
+            <slot />
+            
+          </main>
+        </div>
+        <!-- {expandFooter? "":<SideBarFooter />} -->
+      </div>
+      {includeSidebar && <SideBar expandFooter={expandFooter} changeColour={changeColour} sideBarActiveItemID={sideBarActiveItemID} title={title} />}
+    </div>
+  </body>
+</html>

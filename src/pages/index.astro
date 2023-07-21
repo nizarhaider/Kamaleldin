@@ -1,0 +1,104 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+import { getCollection } from "astro:content";
+import Card from "../components/Card.astro";
+import { Image } from "@astrojs/image/components";
+
+const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const last_posts = posts.slice(0, 3);
+
+const uniqueTags = [...new Set(posts.map((post) => post.data.tags).flat())];
+
+---
+<div class="bg-[url('/background_home.svg')] bg-contain">
+
+<BaseLayout expandFooter="" sideBarActiveItemID="home" title="home" >
+  <!-- <div class="absolute bottom-0 w-screen h-screen  bg-teal-800 z-50">  
+  </div> -->
+  <div class="px-5 pb-12  bg-white">
+    <div class="flex justify-between items-center pt-8"> 
+      <div>
+      </div>
+      <div class="flex justify-end ">
+        <a href="/about" class="btn btn-outline border-base-300 ml-5">
+          About
+        </a>
+
+        <a href="https://github.com/manuelernestog/astrofy"  class="btn btn-outline border-base-300 mx-5">
+        <!-- Profile Image -->
+        <Image class="mask mask-circle" aspectRatio="1:1" format="webp" width={30} height={30} src="/profile.svg" alt="Profile image" />
+        <span class="text-sm"> online </span>
+        <span class="relative">
+          <span class="absolute w-1 h-1 bg-green-500 rounded-full animate-blink" style="top: 50%; transform: translate(-50%, -50%);"></span>
+        </span>
+        <span class="text-sm"> | chat </span>
+
+      </a>
+
+
+        <a class="btn bg-blue-950 text-white relative z-10" href="https://twitter.com/manuelernestog" target="_blank"> Resume
+      </a>
+
+      </div>
+
+      </div>
+    </div>
+  <div class="  bg-gradient-to-r from-gray-100  backdrop-blur-sm">
+      <div>
+        <div class="h-40 pt-5 px-4 text-lg w-full font-normal mb-2 text-center text-stone-300">filter by service
+        
+          <div class="mt-4">
+            {uniqueTags.map((tag) => (
+              <a href={"/tags/" + tag} target="_blank" class="btn btn-outline border-stone-300 ml-5">
+                {tag}
+              </a>
+             
+            ))}
+          </div>
+
+        </div>
+      </div>
+
+      <!-- <HorizontalCard
+        title="Demo Project 1"
+        img="/post_img.png"
+        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        url="#"
+        badge="NEW"
+      />
+      <div class="divider my-0"></div>
+      <HorizontalCard
+        title="Demo Project 2"
+        img="/post_img.png"
+        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        url="#"
+      />
+      <div class="divider my-0"></div>
+      <HorizontalCard
+        title="Demo Project 3"
+        img="/post_img.png"
+        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        url="#"
+        badge="FOSS"
+      /> -->
+      
+        {
+          last_posts.map((post) => (
+            <>
+              <HorizontalCard
+                title={post.data.title}
+                img={post.data.heroImage}
+                desc={post.data.description}
+                url={"/blog/" + post.slug}
+                target="_self"
+                badge={post.data.badge}
+              />
+              <div class="divider my-0" />
+            </>
+          ))
+
+        }
+  </div>
+</BaseLayout>
+</div>

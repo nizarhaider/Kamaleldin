@@ -1,0 +1,74 @@
+---
+import SideBarFooter from "./SideBarFooter.astro";
+import { Image } from "@astrojs/image/components";
+import SideBarMenu from "./SideBarMenu.astro";
+const { sideBarActiveItemID, expandFooter, changeColour, page_title, title } = Astro.props;
+---
+<!-- 
+<div class="drawer-side z-40">
+  <label for="my-drawer" class="drawer-overlay"></label>
+  <aside class=" pt-2 h-auto min-h-full w-[30rem] bg-teal-800 text-base-content flex flex-col">
+    <div class="w-fit mx-auto mt-5 mb-6">
+      <a href="/">
+        <div class="avatar transition ease-in-out hover:scale-[102%] block m-auto">
+          <div class="w-[8.5rem]">
+            <Image class="mask mask-circle" aspectRatio="1:1" format="webp" width={300} height={300} src="/profile.svg" alt="Profile image" />
+          </div>
+        </div>
+      </a>
+    </div>
+    <SideBarMenu sideBarActiveItemID={sideBarActiveItemID} /> -->
+    <!-- <SideBarFooter />
+  </aside>
+</div> -->
+
+<div class={"drawer-side" + (expandFooter ? " overflow-visible" : "")}>
+  <label for="my-drawer" class="drawer-overlay"></label>
+  <aside class={"pt-2 h-auto min-h-full w-[30rem]  text-base-content flex flex-col" + (changeColour ? " bg-orange-800" : " bg-teal-800")}>
+    <div class="px-4 "> 
+      <!-- First Row -->
+      <div class={title=="About"? "flex-grow text-center px-4 py-2 " : "columns-2 gap-4 flex justify-between items-center px-4 py-2   "}>
+        <div class={title=="About"? "flex justify-center  mb-3":""}>
+          <!-- Profile Image -->
+              {title=="About"? <Image class="mask mask-circle" aspectRatio="1:1" format="webp" width={150} height={150} src="/profile.svg" alt="Profile image" />: <Image class="mask mask-circle " aspectRatio="1:1" format="webp" width={50} height={50} src="/profile.svg" alt="Profile image" />}
+        </div>
+        <div class=" w-full ">
+          <!-- Some Text -->
+          <p class="font-normal text-white text-lg">Ahmed <span class="font-bold ">Kamal Eldin</span> </p>
+          <p class="font-extralight text-white text-base font-sans">Digital Products Desiger and Developer</p>
+        </div>
+      </div>
+
+      <!-- Second Row -->
+      <div class="px-4 py-2 ">
+        <div class={title === "About" ? " hidden" : ""}>
+          <!-- Some Text -->
+          <p class="font-semibold pt-3 text-white text-2xl">Hello! <span class="font-normal">I'm Ahmed </span> 👋</p>
+          <p class="font-bold pt-3 text-white text-5xl">I Design <span class="text-orange-100">&</span> Build</p>
+          <p class="font-normal pt-3 text-orange-100 text-2xl">digital products & experiences</p>
+          <br>
+        </div>
+        <p class="font-light pt-3 text-white text-sm">I design creative high-fidelity prototypes and sustainable design systems, rapidly.</p>
+        <p class="font-light pt-3 text-white text-sm">With my background as a software engineer, I seamlessly blend functionality and artistry to create captivating experiences.</p>
+        <p class="font-light pt-3 text-white text-sm">Lets work together to bring your visions to life
+            Rapidly, Functionally, and Sustainably</p>
+
+      </div>
+
+      <!-- Third Row -->
+      <div class="self-left justify-start flex px-4 py-2 ">
+        <!-- Button -->
+        <button class="bg-blue-950 hover:bg-blue-700 text-white py-3 px-4 font-normal">
+           Got a project? <span class="font-semibold underline">Let's get started</span>
+        </button>
+      </div>
+    </div>
+    <!-- Footer Row -->
+    <div class="flex-grow "></div>
+    <div class={"  bg-teal-900" + (expandFooter ? " w-screen absolute bottom-0" : "")} >
+      <!-- Sidebar Footer -->
+      <SideBarFooter expandFooter={expandFooter} changeColour={changeColour}/>
+    </div>
+  </aside>
+</div>
+
