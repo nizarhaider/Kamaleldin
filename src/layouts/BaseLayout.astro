@@ -15,16 +15,14 @@ const { image, title = SITE_TITLE, description = SITE_DESCRIPTION, includeSideba
   </head>
   <body>
     
-    <div class=" drawer lg:drawer-open">
-      
+    <div class=" relative drawer lg:drawer-open">
+      <div class="absolute overflow-hidden scrollbar-hide bg-teal-800 w-full h-full z-50 "> </div>
       <input id="my-drawer" type="checkbox" class="drawer-toggle" />
-      <div class="drawer-content " >
+      <div class="drawer-content" >
         <Header title={SITE_TITLE} /> 
         <div class="w-full ">
           <main class=" ">
-            
             <slot />
-            
           </main>
         </div>
         <!-- {expandFooter? "":<SideBarFooter />} -->
