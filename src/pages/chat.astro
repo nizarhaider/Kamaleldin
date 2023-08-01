@@ -1,0 +1,65 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+import { getCollection } from "astro:content";
+import Card from "../components/Card.astro";
+import { Image } from "@astrojs/image/components";
+import { motion } from "framer-motion"
+
+const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const last_posts = posts.slice(0, 3);
+const uniqueTags = [...new Set(posts.map((post) => post.data.tags).flat())];
+---
+
+<div class="bg-[url('/background_home.svg')] bg-cover">
+
+<BaseLayout isIndex="" expandFooter="" sideBarActiveItemID="chat" title="chat" >
+  <!-- <div class="absolute bottom-0 w-screen h-screen  bg-teal-800 z-50">  
+  </div> -->
+  <div>
+  <div class=" flex flex-col  h-screen  border border-black">
+
+    <div class=" h-1/5  px-5 pb-12 w-full justify-between items-center py-8 bg-white border border-black"> 
+      <div class="flex ml-2 mt-3">
+      <a href="/">
+        <img width="24" height="24" src="/back.png" alt="back--v1"/>
+      </a>
+      <a href="/" class="mr-3"> Back</a>
+      <a href="/chat"  class="flex align-middle self-center space-x-2 mx-5">
+            <!-- Profile Image -->
+            <Image class="self-center mask mask-circle" aspectRatio="1:1" format="webp" width={30} height={30} src="/profile.svg" alt="Profile image" />
+            <span class="self-center text-sm"> online </span>
+            <span class="relative self-center">
+            <span class="absolute animate-pulse  w-1.5 h-1.5 bg-green-500 rounded-full" style="top: 50%; transform: translate(-50%, -50%);"></span>
+            </span>
+            <span class="text-sm self-center font-semibold"> | Chat </span> </a>    
+    </div>
+    </div>
+
+    <div class="flex flex-col justify-between h-full border border-black">
+      <div class="flex columns-2 align-middle justify-items-start h-1/5 w-full gap-3 pl-3 ">
+
+        <div class="w-auto h-auto  align-middle self-center">
+          <Image class="mask mask-circle" aspectRatio="1:1" format="webp" width={20} height={20} src="/profile.svg" alt="Profile image" />
+        </div>
+
+        <div class="w-auto h-auto  align-middle self-center justify-start bg-white ">
+          <p class="font-normal text-black text-normal text-center align-middle p-2">Hi! this is Ahmed Kamal. How can I help you today? </p>
+        </div>
+        
+      </div>
+      <div class="h-1/5 w-full columns-2 flex justify-between border  border-black">
+
+        <div class="h-auto w-auto border border-black">
+          
+        </div>
+
+        <div class="h-auto w-auto border border-black"></div>
+
+      </div>
+    </div>
+
+    </div>
+  </div>
+</BaseLayout>
+</div>

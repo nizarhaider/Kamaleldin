@@ -4,16 +4,16 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
 import Card from "../components/Card.astro";
 import { Image } from "@astrojs/image/components";
+import { motion } from "framer-motion"
 
 const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const last_posts = posts.slice(0, 3);
-
 const uniqueTags = [...new Set(posts.map((post) => post.data.tags).flat())];
-
 ---
-<div class="bg-[url('/background_home.svg')] bg-contain">
 
-<BaseLayout expandFooter="" sideBarActiveItemID="home" title="home" >
+<div class="bg-[url('/background_home.svg')] bg-cover">
+
+<BaseLayout isIndex="true" expandFooter="" sideBarActiveItemID="home" title="home" >
   <!-- <div class="absolute bottom-0 w-screen h-screen  bg-teal-800 z-50">  
   </div> -->
   <div class="px-5 pb-12  bg-white">
@@ -25,12 +25,12 @@ const uniqueTags = [...new Set(posts.map((post) => post.data.tags).flat())];
           About
         </a>
 
-        <a href="https://github.com/manuelernestog/astrofy"  class="btn btn-outline border-base-300 mx-5">
+        <a href="/chat"  class="btn btn-outline border-base-300 mx-5">
         <!-- Profile Image -->
         <Image class="mask mask-circle" aspectRatio="1:1" format="webp" width={30} height={30} src="/profile.svg" alt="Profile image" />
         <span class="text-sm"> online </span>
         <span class="relative">
-          <span class="absolute w-1 h-1 bg-green-500 rounded-full animate-blink" style="top: 50%; transform: translate(-50%, -50%);"></span>
+          <span class="absolute animate-pulse  w-1.5 h-1.5 bg-green-500 rounded-full" style="top: 50%; transform: translate(-50%, -50%);"></span>
         </span>
         <span class="text-sm"> | chat </span>
       </a>
