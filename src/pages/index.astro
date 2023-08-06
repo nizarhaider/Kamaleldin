@@ -16,7 +16,7 @@ const uniqueTags = [...new Set(posts.map((post) => post.data.tags).flat())];
 <BaseLayout isIndex="true" expandFooter="" sideBarActiveItemID="home" title="home" >
   <!-- <div class="absolute bottom-0 w-screen h-screen  bg-teal-800 z-50">  
   </div> -->
-  <div class="px-5 pb-12  bg-white">
+  <div class="px-5 pb-9  bg-white">
     <div class="flex justify-between items-center pt-8"> 
       <div>
       </div>
@@ -43,9 +43,9 @@ const uniqueTags = [...new Set(posts.map((post) => post.data.tags).flat())];
 
       </div>
     </div>
-  <div class="  bg-gradient-to-r from-gray-100  backdrop-blur-sm">
+  <div class="  bg-gradient-to-r from-[#e0d8bf44]/30 to-slate-900/0 ">
       <div>
-        <div class="h-40 pt-5 px-4 text-lg w-full font-normal mb-2 text-center text-stone-300">filter by service
+        <div class="h-40 pt-5 px-4 text-lg w-full font-normal mb-2 text-center text-stone-500">filter by service
         
           <div class="mt-4">
             {uniqueTags.map((tag) => (

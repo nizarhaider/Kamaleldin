@@ -19,18 +19,18 @@ import { Image } from "@astrojs/image/components";
       {
         heroImage && (
         <Image
-            aspectRatio={"16:9"}
-            width={750}
-            height={300}
+            // aspectRatio={"16:9"}
+            width="auto"
             format="png"
             src={heroImage}
             alt={title} 
-            class="w-full mb-6"
+            class="w-full "
           />
         )
       }
-      <h1 class="title my-2 text-4xl font-bold">{title}</h1>
-      {pubDate && <time>{displayDate}</time>}
+      <div class="px-5">
+      <h1 class=" title my-2 text-4xl font-bold">{title}</h1>
+      <!-- {pubDate && <time>{displayDate}</time>} -->
       <br />
       {badge && <div class="badge badge-secondary my-1">{badge}</div>}
       {
@@ -43,6 +43,7 @@ import { Image } from "@astrojs/image/components";
       }
       <div class="divider my-2"></div>
       <slot />
+      </div>
     </article>
   </main>
 </BaseLayout>
