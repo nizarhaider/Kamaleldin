@@ -63,13 +63,13 @@ const { image, title = SITE_TITLE, description = SITE_DESCRIPTION, isIndex = fal
         setTimeout(function() {
             var parentElement = document.getElementById("animatedDiv");
             parentElement.classList.remove("w-full");
-            parentElement.classList.add("w-[35rem]", "transition-all", "duration-[1200ms]");
+            parentElement.classList.add("w-[35vw]", "transition-all", "duration-[1200ms]");
         }, 2000); // The delay time for parent element in ms
+
         setTimeout(function() {
             var parentElement = document.getElementById("animatedDiv");
           parentElement.classList.add("opacity-5", "duration-[1200ms]");
-        }, 3000); // The delay time for parent element in ms
-
+        }, 2900); // The delay time for parent element in ms
     
     setTimeout(function() {
             var childDiv = document.getElementById("childDiv");

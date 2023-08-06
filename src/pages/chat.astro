@@ -17,6 +17,10 @@ if (Astro.request.method === "POST") {
     }
   }
 }
+
+function handleClick() {
+  console.log("clicked");
+} 
 ---
 
 <div class="bg-[url('/background_home.svg')] bg-cover ">
@@ -25,7 +29,7 @@ if (Astro.request.method === "POST") {
   <!-- <div class="absolute bottom-0 w-screen h-screen  bg-teal-800 z-50">  
   </div> -->
   <div>
-  <div class=" flex flex-col  h-screen ">
+  <div class=" flex flex-col h-screen">
 
     <div class=" flex h-20  px-5  w-full  items-center py-8 bg-white"> 
       <div class="flex ml-2 mt-3">
@@ -33,17 +37,10 @@ if (Astro.request.method === "POST") {
         <img width="24" height="24" src="/back.png" alt="back--v1"/>
       </a>
       <a href="/" class="self-center mr-3"> Back</a>
-      <!-- <a href="/chat"  class="flex align-middle self-center space-x-2 mx-5">
-            <Image class="self-center mask mask-circle" aspectRatio="1:1" format="webp" width={30} height={30} src="/profile.svg" alt="Profile image" />
-            <span class="self-center text-sm"> online </span>
-            <span class="relative self-center">
-            <span class="absolute animate-pulse  w-1.5 h-1.5 bg-green-500 rounded-full" style="top: 50%; transform: translate(-50%, -50%);"></span>
-            </span>
-            <span class="text-sm self-center font-semibold"> | Chat </span> </a>     -->
     </div>
     </div>
 
-    <div class="flex flex-col justify-between h-full ">
+    <div class="flex flex-col justify-between h-full">
       <div class="flex columns-2 align-middle justify-items-start h-1/5 w-full gap-3 pl-3 ">
 
         <div class="w-auto h-auto  align-middle self-center">
@@ -53,20 +50,129 @@ if (Astro.request.method === "POST") {
         <div class="w-auto h-auto  align-middle self-center justify-start bg-white rounded-md shadow-lg">
           <p class="font-normal text-black text-normal text-center align-middle p-2">Hi! this is Ahmed Kamal. How can I help you today? </p>
         </div>
-        
       </div>
-      <form class="h-1/5 w-full columns-2 flex justify-around bg-white" method="POST">
+      
+      <div id="chat-container" class="h-1/6 w-full flex  bg-white">
         
-          <div class="flex w-2/3 border border-black align-middle self-center">
-            <input name="message" type="text" class="input input-bordered w-full" placeholder="Type your message" required />
+          <div id="third" class="flex w-full align-middle justify-center self-center hidden">
+            <h2 class="align-middle text-center font-semibold text-xl text-[#ebdbab]">
+              Submitted 
+            </h2>
+          </div>
+        
+
+        <div id="second" class="grid grid-rows-4 gap-4 w-full self-center hidden">
+          <div class=" self-center">
+            <h2 class="align-middle  text-center font-semibold text-xl text-[#E0D8BF]">
+              How can I get back to you?
+            </h2>
+          </div>
+          <div class="self-center justify-center flex">
+            <p  class="align-middle w-1/2 text-center font-normal text-md text-[#B1BACC] ">
+              Please provide your email and name below. I will get back to you as soon as I possible.
+            </p>
+          </div>
+          <div class="self-center justify-center flex ">
+            <p id="userMessage" class="align-middle w-4/5 text-center bg-[#faf9f7e0] font-normal text-normal text-[#B1BACC] ">
+            </p>
+          </div>
+          <div class="">
+
+              <form class="flex w-full items-center justify-between px-5" id="chat-form2" method="POST">
+                  <div class="flex flex-1 px-2">
+                      <input name="name" type="text" class="input input-bordered w-full h-8" placeholder="Name..." required />
+                  </div>
+
+                  <div class="flex flex-1 px-2">
+                      <input name="email" type="text" class="input input-bordered w-full h-8" placeholder="Official Email address..." required />
+                  </div>
+
+                  <button id="submit2" class="btn btn-accent h-8  min-h-0  bg-[#122447D9]">
+                      <a href="/chat" class="font-normal">Submit</a> 
+                  </button>
+              </form>
+
+          </div>
+
+
         </div>
 
-        <button class="flex btn btn-accent w-1/6 self-center bg-[rgb(18, 36, 71)]">
-          <a href="/chat">SEND</a>
-        </button>
+        <form class="flex w-full self-center align-middle columns-2 justify-around " id="chat-form"  method="POST">
+            
+            <div class="flex w-2/3 border border-black align-middle self-center">
+                <input name="message" type="text" class="input input-bordered w-full" placeholder="Type your message" required />
+            </div>
 
-    </form>
+            <button id="submit" class="flex btn btn-accent w-1/6 self-center bg-[rgb(18, 36, 71)]">
+              <a href="/chat">SEND</a>
+            </button>
+
+        </form>
+
+      </div>
     </div>
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {  // Ensure the DOM is fully loaded
+    const button = document.getElementById('submit');
+    const messageInput = document.querySelector('input[name="message"]');
+    const button2 = document.getElementById('submit2');
+    const name = document.querySelector('input[name="name"]');
+    const email = document.querySelector('input[name="email"]');
+
+    // Handle clicks on the button.
+    button.addEventListener('click', (event) => {
+        event.preventDefault();  // Prevent any default action
+        const message = messageInput.value.trim();
+        console.log(message);
+
+        setTimeout(function() {
+            var chatContainer = document.getElementById("chat-container");
+            var chatForm = document.getElementById("chat-form");
+
+            chatContainer.classList.remove("h-1/6");
+            chatContainer.classList.add("h-1/2", "transition-all", "duration-[700ms]");
+            chatForm.classList.add('hidden');
+            const userMessageElement = document.getElementById('userMessage');
+            userMessageElement.innerText = message;
+
+        }, 0); // The delay time for parent element in ms
+
+        setTimeout(function() {
+            var second = document.getElementById("second");
+
+            second.classList.remove("hidden");
+            
+        }, 700); // The delay time for parent element in ms
+
+    });
+
+    button2.addEventListener('click', (event) => {
+        event.preventDefault();  // Prevent any default action
+        const name = name.value.trim();
+        const email = name.value.trim();
+
+        console.log(name, email);
+        
+        setTimeout(function() {
+            var second = document.getElementById("second");
+            second.classList.add('hidden');
+
+            
+        }, 0); // The delay time for parent element in ms
+
+        setTimeout(function() {
+            var third = document.getElementById("third");
+
+            second.classList.remove("hidden");
+            
+
+        }, 700); // The delay time for parent element in ms
+
+    });
+});
+
+  </script>
+
 </BaseLayout>
 </div>

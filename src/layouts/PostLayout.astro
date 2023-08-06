@@ -19,8 +19,8 @@ import { Image } from "@astrojs/image/components";
       {
         heroImage && (
         <Image
-            // aspectRatio={"16:9"}
-            width="auto"
+            height={100}
+            width={100}
             format="png"
             src={heroImage}
             alt={title} 
