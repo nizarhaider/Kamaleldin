@@ -49,42 +49,20 @@ const uniqueTags = [...new Set(posts.map((post) => post.data.tags).flat())];
         
           <div class="mt-4">
             {uniqueTags.map((tag) => (
-              <a href={"/tags/" + tag} target="_blank" class="btn btn-outline border-stone-300 ml-5">
+              <a href="#" data-tag={tag} class="btn btn-outline border-stone-300 ml-5 tag-button">
                 {tag}
               </a>
-             
             ))}
+            <a href="#" class="btn btn-outline border-stone-300 ml-5 tag-button" data-tag="all">Show All</a>
           </div>
-
         </div>
       </div>
-
-      <!-- <HorizontalCard
-        title="Demo Project 1"
-        img="/post_img.png"
-        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        url="#"
-        badge="NEW"
-      />
-      <div class="divider my-0"></div>
-      <HorizontalCard
-        title="Demo Project 2"
-        img="/post_img.png"
-        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        url="#"
-      />
-      <div class="divider my-0"></div>
-      <HorizontalCard
-        title="Demo Project 3"
-        img="/post_img.png"
-        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        url="#"
-        badge="FOSS"
-      /> -->
       
         {
           last_posts.map((post) => (
             <>
+            <div class="post relative group transition-opacity duration-300" data-tags={post.data.tags.join(',')}>
+              
               <HorizontalCard
                 title={post.data.title}
                 img={post.data.heroImage}
@@ -92,12 +70,48 @@ const uniqueTags = [...new Set(posts.map((post) => post.data.tags).flat())];
                 url={"/blog/" + post.slug}
                 target="_self"
                 badge={post.data.badge}
+                tags={post.data.tags}
               />
-              <div class="divider my-0" />
+           
+              {/* Overlay */}
+              <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100">
+                {post.data.tags.map(tag => (
+                  <span class="m-1 px-2 py-1 bg-white rounded-md">{tag}</span>
+                ))}
+              </div>
+              
+            <div class="divider my-0" />
+           </div>
             </>
           ))
 
         }
   </div>
 </BaseLayout>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Grab all the tag buttons and posts
+  const tagButtons = document.querySelectorAll('.tag-button');
+  const posts = document.querySelectorAll('.post');
+
+  tagButtons.forEach(button => {
+    button.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      // Get the tag from the clicked button
+      const tag = e.target.getAttribute('data-tag');
+
+      // Filter posts based on the tag
+      posts.forEach(post => {
+        if (tag === 'all' || post.getAttribute('data-tags').includes(tag)) {
+          post.classList.remove('hidden'); // show post
+        } else {
+          post.classList.add('hidden'); // hide post
+        }
+      });
+    });
+  });
+});
+</script>
+
 </div>

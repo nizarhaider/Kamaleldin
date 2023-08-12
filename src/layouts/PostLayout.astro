@@ -6,25 +6,34 @@ import localizedFormat from "dayjs/plugin/localizedFormat";
 
 export interface Props extends BlogSchema {}
 
-const { title, description, pubDate, updatedDate, heroImage, badge } =
-  Astro.props;
+const { title, description, pubDate, heroImage, badge } = Astro.props;
+
 dayjs.extend(localizedFormat);
 const displayDate = dayjs(pubDate).format("ll");
 import { Image } from "@astrojs/image/components";
 ---
 
 <BaseLayout title={title} description={description} image={heroImage} expandFooter="">
-  <main class="md:flex md:justify-center">
+  <main class="md:flex md:justify-center relative">
+    <div class="flex ml-2 mt-5 absolute top-0 left-0">
+        <a href="/">
+          <img width="24" height="24" src="/back.png" alt="back--v1"/>
+        </a>
+
+        <a href="/" class="mr-3 text-slate-400"> Back</a>
+
+        <a href="#" class="font-semibold text-[#E0D8BF]"> Edumize</a>
+      </div>
     <article class="prose prose-lg max-w-full prose-img:mx-auto">
       {
         heroImage && (
         <Image
-            height={100}
+            height= {100}
             width={100}
-            format="png"
+            format="svg"
             src={heroImage}
             alt={title} 
-            class="w-full "
+            class="w-full"
           />
         )
       }
@@ -33,14 +42,14 @@ import { Image } from "@astrojs/image/components";
       <!-- {pubDate && <time>{displayDate}</time>} -->
       <br />
       {badge && <div class="badge badge-secondary my-1">{badge}</div>}
-      {
+      <!-- {
         updatedDate && (
           <div>
             {" "}
             Last updated on <time>{updatedDate}</time>{" "}
           </div>
         )
-      }
+      } -->
       <div class="divider my-2"></div>
       <slot />
       </div>
