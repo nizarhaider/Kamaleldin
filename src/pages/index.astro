@@ -60,33 +60,48 @@ const uniqueTags = [...new Set(posts.map((post) => post.data.tags).flat())];
       
         {
           last_posts.map((post) => (
-            <>
-            <div class="post relative group transition-opacity duration-300" data-tags={post.data.tags.join(',')}>
-              
-              <HorizontalCard
-                title={post.data.title}
-                img={post.data.heroImage}
-                desc={post.data.description}
-                url={"/blog/" + post.slug}
-                target="_self"
-                badge={post.data.badge}
-                tags={post.data.tags}
-              />
-           
-              {/* Overlay */}
-              <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100">
-                {post.data.tags.map(tag => (
-                  <span class="m-1 px-2 py-1 bg-white rounded-md">{tag}</span>
-                ))}
+            <div class="post relative group transition-opacity duration-300 hover:bg-opacity-80" data-tags={post.data.tags.join(',')}>
+
+             
+              <div class="rounded-lg bg-white hover:shadow-xl transition ease-in-out hover:scale-[102%] m-10">
+                <a href={"/blog/" + post.slug} target="_self">
+                  <div class="flex flex-col">
+                    <div class="relative w-full">
+                       <div class="absolute inset-0 flex items-start justify-items-start flex-col bg-gradient-to-r from-[#e0d8bf44]/50 to-slate-900/0 bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity">
+                          {post.data.tags.map(tag => (
+                            <span class="mt-3 mx-2  text-black bg-[#FAF9F7] px-3 py-1">{tag}</span>
+                          ))}
+                        </div>
+                        <div>
+                      {post.data.heroImage && (
+                        <Image
+                          src={post.data.heroImage}
+                          height={300}
+                          width={720}
+                          aspectRatio={16 / 9}
+                          format="png"
+                          alt={post.data.title}
+                          class=" w-full h-full object-cover"
+                        />
+                      )}
+                        </div>
+                    </div>
+                    <div class="p-4">
+                      <h1 class="text-xl font-bold">
+                        {post.data.title}
+                      </h1>
+                      <p class="py-1 text-1xl">{post.data.description}</p>
+                    </div>
+                  </div>
+                </a>
               </div>
               
-            <div class="divider my-0" />
-           </div>
-            </>
+          </div>
           ))
-
         }
+
   </div>
+
 </BaseLayout>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
