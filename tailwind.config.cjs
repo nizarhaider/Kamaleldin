@@ -8,7 +8,7 @@ module.exports = {
   plugins: [
     require("@tailwindcss/typography"),
     require("daisyui"),
-    require("tailwind-scrollbar-hide"),
+    require("tailwind-scrollbar"),
   ],
   daisyui: {
     themes: true, // true: all themes | false: only light + dark | array: specific themes like this ["light", "dark", "cupcake"]

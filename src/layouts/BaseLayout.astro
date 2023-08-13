@@ -15,7 +15,7 @@ const { image, title = SITE_TITLE, description = SITE_DESCRIPTION, isIndex = fal
   <head>
     <BaseHead title={title} description={description} image={image} />
   </head>
-  <body>
+  <body class="scrollbar-thin scrollbar-thumb-[#E0D8BF] scrollbar-track-[#FFFFFF]  ">
     
     <div class=" relative drawer lg:drawer-open">
       {isIndex && <div id="animatedDiv" class="flex justify-center align-middle absolute overflow-hidden h-screen bg-teal-800 w-full z-30 opacity-100">
@@ -41,9 +41,8 @@ const { image, title = SITE_TITLE, description = SITE_DESCRIPTION, isIndex = fal
           <SideBarFooter expandFooter="true" changeColour={changeColour}/>
         </div>
       </div>}
-      
       <input id="my-drawer" type="checkbox" class="drawer-toggle" />
-      <div id="feed" class="drawer-content backdrop-blur-md h-screen overflow-hidden bg-slate-400/10" >
+      <div id="feed" class="drawer-content backdrop-blur-md h-screen overflow-hidden " >
         <Header title={SITE_TITLE} /> 
         <div class="w-full ">
           <main class=" ">
@@ -54,7 +53,6 @@ const { image, title = SITE_TITLE, description = SITE_DESCRIPTION, isIndex = fal
       </div>
       {includeSidebar && <SideBar expandFooter={expandFooter} changeColour={changeColour} sideBarActiveItemID={sideBarActiveItemID} title={title} />}
     </div>
-
 
     <script define:vars={{isIndex}}>
       

@@ -13,43 +13,50 @@ const uniqueTags = [...new Set(posts.map((post) => post.data.tags).flat())];
 
 <div class="bg-[url('/background_home.svg')] bg-cover">
 
-<BaseLayout isIndex="true" expandFooter="" sideBarActiveItemID="home" title="home" >
+<BaseLayout isIndex="true" expandFooter="" sideBarActiveItemID="Home" title="Home" >
   <!-- <div class="absolute bottom-0 w-screen h-screen  bg-teal-800 z-50">  
   </div> -->
-  <div class="px-5 pb-9  bg-white">
+  <div class="px-5 pb-9  bg-white ">
     <div class="flex justify-between items-center pt-8"> 
-      <div>
-      </div>
-      <div class="flex justify-end ">
-        <a href="/about" class="btn btn-outline border-base-300 ml-5">
-          About
+      <div class=" flex w-full items-center">
+        <div class="flex-auto w-auto items-center">
+          <a href="/" class="align-middle self-center font-semibold text-[#122447]">
+                      Work
+          </a>
+        </div>
+
+        <div class="flex self-end justify-end items-center ">
+          
+          <a href="/about" class="btn btn-outline border-base-300 ml-5 text-[#E0D8BF]">
+            About
+          </a>
+
+          <a href="/chat"  class="btn btn-outline border-base-300 mx-5 ">
+          <!-- Profile Image -->
+          <Image class="mask mask-circle" aspectRatio="1:1" format="webp" width={30} height={30} src="/profile.svg" alt="Profile image" />
+          <span class="text-sm text-black"> online </span>
+          <span class="relative">
+            <span class="absolute animate-pulse  w-1.5 h-1.5 bg-green-500 rounded-full" style="top: 50%; transform: translate(-50%, -50%);"></span>
+          </span>
+          <span class="text-sm text-[#E0D8BF]"> | chat </span>
         </a>
 
-        <a href="/chat"  class="btn btn-outline border-base-300 mx-5">
-        <!-- Profile Image -->
-        <Image class="mask mask-circle" aspectRatio="1:1" format="webp" width={30} height={30} src="/profile.svg" alt="Profile image" />
-        <span class="text-sm"> online </span>
-        <span class="relative">
-          <span class="absolute animate-pulse  w-1.5 h-1.5 bg-green-500 rounded-full" style="top: 50%; transform: translate(-50%, -50%);"></span>
-        </span>
-        <span class="text-sm"> | chat </span>
-      </a>
 
+          <a class="btn bg-blue-950  relative z-10 text-[#FAF9F7]" href="https://twitter.com" target="_blank"> Resume
+        </a>
 
-        <a class="btn bg-blue-950 text-white relative z-10" href="https://twitter.com" target="_blank"> Resume
-      </a>
+        </div>
 
       </div>
-
       </div>
     </div>
   <div class="  bg-gradient-to-r from-[#e0d8bf44]/30 to-slate-900/0 ">
-      <div>
-        <div class="h-40 pt-5 px-4 text-lg w-full font-normal mb-2 text-center text-stone-500">filter by service
+      <div class="flex justify-center">
+        <div class="h-auto pt-5 px-4  text-lg w-3/4 font-normal mb-2 text-center text-[#E0D8BF]">filter by service
         
-          <div class="mt-4">
+          <div class="mt-4 ">
             {uniqueTags.map((tag) => (
-              <a href="#" data-tag={tag} class="btn btn-outline border-stone-300 ml-5 tag-button">
+              <a href="#" data-tag={tag} class="btn btn-outline border-[#E0D8BF] ml-5 m-2 tag-button">
                 {tag}
               </a>
             ))}
@@ -60,13 +67,13 @@ const uniqueTags = [...new Set(posts.map((post) => post.data.tags).flat())];
       
         {
           last_posts.map((post) => (
-            <div class="post relative group transition-opacity duration-300 hover:bg-opacity-80" data-tags={post.data.tags.join(',')}>
+            <div class="post relative  transition-opacity duration-300 hover:bg-opacity-80" data-tags={post.data.tags.join(',')}>
 
              
-              <div class="rounded-lg bg-white hover:shadow-xl transition ease-in-out hover:scale-[102%] m-10">
+              <div class="rounded-lg bg-white hover:shadow-xl transition ease-in-out hover:scale-[100%] m-10">
                 <a href={"/blog/" + post.slug} target="_self">
                   <div class="flex flex-col">
-                    <div class="relative w-full">
+                    <div class="relative group w-full">
                        <div class="absolute inset-0 flex items-start justify-items-start flex-col bg-gradient-to-r from-[#e0d8bf44]/50 to-slate-900/0 bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity">
                           {post.data.tags.map(tag => (
                             <span class="mt-3 mx-2  text-black bg-[#FAF9F7] px-3 py-1">{tag}</span>
