@@ -32,7 +32,7 @@ const { image, title = SITE_TITLE, description = SITE_DESCRIPTION, isIndex = fal
         <div id="childDiv" class="block  align-middle self-center text-center  w-auto h-auto"
 
         >
-          <p class="font-normal text-white text-3xl ">Ahmed <span class="font-bold ">Kamal Eldin</span> </p>
+          <p class="font-normal text-[#E0D8BF] text-3xl ">Ahmed <span class="font-bold text-[#E0D8BF]">Kamal Eldin</span> </p>
           <p class="font-extralight text-white text-base font-sans">Digital Products Desiger and Developer</p>  
         </div>
 
@@ -54,50 +54,67 @@ const { image, title = SITE_TITLE, description = SITE_DESCRIPTION, isIndex = fal
       {includeSidebar && <SideBar expandFooter={expandFooter} changeColour={changeColour} sideBarActiveItemID={sideBarActiveItemID} title={title} />}
     </div>
 
-    <script define:vars={{isIndex}}>
-      
-    window.onload = function() {
-  if ( isIndex == "true") {
-        setTimeout(function() {
-            var parentElement = document.getElementById("animatedDiv");
-            parentElement.classList.remove("w-full");
-            parentElement.classList.add("w-[35vw]", "transition-all", "duration-[1200ms]");
-        }, 2000); // The delay time for parent element in ms
+<script define:vars={{isIndex}}>
 
-        setTimeout(function() {
-            var parentElement = document.getElementById("animatedDiv");
-          parentElement.classList.add("opacity-5", "duration-[1200ms]");
-        }, 2900); // The delay time for parent element in ms
-    
+window.onload = function() {
+  // Check if the animations have been played before
+  const animationsPlayed = localStorage.getItem('animationsPlayed');
+
+  if (isIndex == "true" && !animationsPlayed) {
     setTimeout(function() {
-            var childDiv = document.getElementById("childDiv");
-            childDiv.classList.add("opacity-20", "duration-[1000ms]");
-        }, 2000); // The delay time for parent element in ms
+        var parentElement = document.getElementById("animatedDiv");
+        parentElement.classList.remove("w-full");
+        parentElement.classList.add("w-[40vw]", "transition-all", "duration-[1200ms]");
+    }, 2000);
 
-     setTimeout(function() {
-            var childDiv = document.getElementById("childDiv");
-            childDiv.classList.add("-translate-y-[40vh]", "-translate-x-[6vw]", "transition-all","scale-50", "duration-[1000ms]");
-        }, 2000); // The delay time for parent element in ms
+    setTimeout(function() {
+        var parentElement = document.getElementById("animatedDiv");
+        parentElement.classList.add("opacity-5", "duration-[1200ms]");
+    }, 2900);
 
-      setTimeout(function() {
-            var parentElement = document.getElementById("animatedDiv");
-            parentElement.classList.add("hidden");
-        }, 5000); // The delay time for parent element in ms
+    setTimeout(function() {
+        var childDiv = document.getElementById("childDiv");
+        childDiv.classList.add("opacity-20", "duration-[1000ms]");
+    }, 2000);
 
-        setTimeout(function() {
-            var feedElement = document.getElementById("feed");
-            feedElement.classList.remove("overflow-hidden","h-screen");
-        }, 5000); // The delay time for parent element in ms
-      }
-      else {
-        setTimeout(function() {
-            var feedElement = document.getElementById("feed");
-            feedElement.classList.remove("overflow-hidden","h-screen");
-        }, 0); // The delay time for parent element in ms
+    setTimeout(function() {
+        var childDiv = document.getElementById("childDiv");
+        childDiv.classList.add("-translate-y-[40vh]", "-translate-x-[6vw]", "transition-all","scale-50", "duration-[1000ms]");
+    }, 2000);
+
+    setTimeout(function() {
+        var parentElement = document.getElementById("animatedDiv");
+        parentElement.classList.add("hidden");
+    }, 5000);
+
+    setTimeout(function() {
+        var feedElement = document.getElementById("feed");
+        feedElement.classList.remove("overflow-hidden","h-screen");
+    }, 5000);
+
+    // Mark animations as played
+    localStorage.setItem('animationsPlayed', 'true');
   }
-    };
+
+  
+  else {
+    
+       var parentElement = document.getElementById("animatedDiv");
+        parentElement.classList.add("opacity-5", "duration-[300ms]");
+        setTimeout(() => {
+          parentElement.classList.add("hidden");
+        }, 400);
+        
+
+        var feedElement = document.getElementById("feed");
+        feedElement.classList.remove("overflow-hidden","h-screen");
+        
+    
+  }
+};
 
 
-    </script>
+</script>
+
   </body>
 </html>

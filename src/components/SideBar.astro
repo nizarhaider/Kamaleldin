@@ -25,7 +25,7 @@ const { sideBarActiveItemID, expandFooter, changeColour, page_title, title } = A
 
 <div class={"drawer-side " + (expandFooter ? " overflow-visible" : "")}>
   <label for="my-drawer" class="drawer-overlay"></label>
-  <aside class={"pt-2 h-auto min-h-full w-[35vw]  text-base-content flex flex-col" + (changeColour ? " bg-[#623D3D]" : " bg-teal-800")}>
+  <aside class={"pt-2 h-auto min-h-full w-[40vw]  text-base-content flex flex-col" + (changeColour ? " bg-[#623D3D]" : " bg-teal-800")}>
     <div class="px-4 "> 
       <!-- First Row -->
       <div class={title=="About"? "flex-grow text-center px-4 py-2 " : "columns-2 gap-4 flex justify-between items-center px-4 py-2   "}>
@@ -59,7 +59,7 @@ const { sideBarActiveItemID, expandFooter, changeColour, page_title, title } = A
       <!-- Third Row -->
       <div class="self-left justify-start flex px-4 py-2 ">
         <!-- Button -->
-        <button class="bg-blue-950 hover:bg-blue-700 text-white py-3 px-4 font-normal">
+        <button class="bg-[#122447] hover:bg-gradient-to-r from-[#122447] to-[#B1BACC] text-white py-3 px-4 font-normal">
            Got a project? <span class="font-semibold underline">Let's get started</span>
         </button>
       </div>

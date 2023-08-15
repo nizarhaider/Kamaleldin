@@ -9,6 +9,8 @@ import { motion } from "framer-motion"
 const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const last_posts = posts.slice(0, 3);
 const uniqueTags = [...new Set(posts.map((post) => post.data.tags).flat())];
+// const shouldRender = !localStorage.getItem('animationsPlayed');
+
 ---
 
 <div class="bg-[url('/background_home.svg')] bg-cover">
@@ -27,22 +29,20 @@ const uniqueTags = [...new Set(posts.map((post) => post.data.tags).flat())];
 
         <div class="flex self-end justify-end items-center ">
           
-          <a href="/about" class="btn btn-outline border-base-300 ml-5 text-[#E0D8BF]">
+          <a href="/about" class="btn btn-outline border-base-300 ml-5 hover:bg-[#356262] text-[#E0D8BF]">
             About
           </a>
 
-          <a href="/chat"  class="btn btn-outline border-base-300 mx-5 ">
+          <a href="/chat"  class="btn btn-outline border-base-300 mx-5 hover:bg-[#356262]">
           <!-- Profile Image -->
           <Image class="mask mask-circle" aspectRatio="1:1" format="webp" width={30} height={30} src="/profile.svg" alt="Profile image" />
-          <span class="text-sm text-black"> online </span>
+          <span class="text-sm "> online </span>
           <span class="relative">
             <span class="absolute animate-pulse  w-1.5 h-1.5 bg-green-500 rounded-full" style="top: 50%; transform: translate(-50%, -50%);"></span>
           </span>
           <span class="text-sm text-[#E0D8BF]"> | chat </span>
         </a>
-
-
-          <a class="btn bg-blue-950  relative z-10 text-[#FAF9F7]" href="https://twitter.com" target="_blank"> Resume
+          <a class="btn bg-blue-950  relative z-10 text-[#FAF9F7] hover:bg-[#356262]" href="https://twitter.com" target="_blank"> Resume
         </a>
 
         </div>
@@ -56,11 +56,11 @@ const uniqueTags = [...new Set(posts.map((post) => post.data.tags).flat())];
         
           <div class="mt-4 ">
             {uniqueTags.map((tag) => (
-              <a href="#" data-tag={tag} class="btn btn-outline border-[#E0D8BF] ml-5 m-2 tag-button">
+              <a href="#" data-tag={tag} class="btn btn-outline border-[#E0D8BF] ml-5 m-2 tag-button hover:bg-[#E0D8BF] hover:text-black">
                 {tag}
               </a>
             ))}
-            <a href="#" class="btn btn-outline border-stone-300 ml-5 tag-button" data-tag="all">Show All</a>
+            <!-- <a href="#" class="btn btn-outline border-stone-300 ml-5 tag-button hover:bg-[#E0D8BF] hover:text-black" data-tag="all">Show All</a> -->
           </div>
         </div>
       </div>
@@ -70,10 +70,10 @@ const uniqueTags = [...new Set(posts.map((post) => post.data.tags).flat())];
             <div class="post relative  transition-opacity duration-300 hover:bg-opacity-80" data-tags={post.data.tags.join(',')}>
 
              
-              <div class="rounded-lg bg-white hover:shadow-xl transition ease-in-out hover:scale-[100%] m-10">
+              <div class="rounded-lg group bg-white hover:shadow-xl transition ease-in-out hover:scale-[100%] m-10">
                 <a href={"/blog/" + post.slug} target="_self">
-                  <div class="flex flex-col">
-                    <div class="relative group w-full">
+                  <div class="flex  flex-col group-hover:bg-[#E0D8BF33]">
+                    <div class="relative  w-full">
                        <div class="absolute inset-0 flex items-start justify-items-start flex-col bg-gradient-to-r from-[#e0d8bf44]/50 to-slate-900/0 bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity">
                           {post.data.tags.map(tag => (
                             <span class="mt-3 mx-2  text-black bg-[#FAF9F7] px-3 py-1">{tag}</span>
@@ -97,7 +97,7 @@ const uniqueTags = [...new Set(posts.map((post) => post.data.tags).flat())];
                       <h1 class="text-xl font-bold">
                         {post.data.title}
                       </h1>
-                      <p class="py-1 text-1xl">{post.data.description}</p>
+                      <p class="py-1 text-1xl group-hover:text-[#122447] text-[#B2A57D]">{post.data.description}</p>
                     </div>
                   </div>
                 </a>
