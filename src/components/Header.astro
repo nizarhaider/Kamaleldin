@@ -5,17 +5,18 @@ import { Image } from "@astrojs/image/components";
 <!-- Navbar & Profile Section -->
 <div class="sticky lg:hidden top-0 z-30 flex-col h-auto w-full justify-center bg-opacity-90 backdrop-blur transition-all duration-100 bg-base-100 text-base-content shadow-sm">
     <div class="navbar bg-[#356262]">
-        <div class="navbar-start">
-            <div class="flex">
+        
+            <div class="width-2/3 justify-content flex-start">
                 <!-- Profile Image -->
-                <Image class="mask mask-circle" format="svg" width={55} height={50} src="/profile.svg" alt="Profile image" />
-            </div>
+                <Image class="mask mask-circle" format="svg" width={40} height={40} src="/profile.svg" alt="Profile image" />
+            
             <div class="w-full px-3">
                 <!-- Some Text -->
                 <p class="font-normal text-white text-sm">Ahmed <span class="font-bold ">Kamal Eldin</span> </p>
-                <p class="font-extralight text-white text-xs font-sans flex">Digital Products Desiger and Developer</p>
+                <p class="font-extralight text-white text-xs font-sans flex  whitespace-nowrap">Digital Products Desiger and Developer</p>
             </div>
-        </div>
+            </div>
+            
         <div class="navbar-center"></div>
         <div class="navbar-end">
             <!-- Toggle Button -->
@@ -28,11 +29,11 @@ import { Image } from "@astrojs/image/components";
     </div>
 
     <!-- Overlay (Initially hidden using 'hidden' class) -->
-    <div id="overlay" class="fixed top-0 left-0 w-screen h-screen bg-white flex  justify-center hidden">
+    <div id="overlay" class="fixed top-0 left-0 w-screen h-screen bg-white flex hidden">
       <div class="relative flex h-screen w-screen items-center justify-center">
-        <a href="/">
-          <Image class="mask mask-circle absolute top-0 right-0" format="svg" width={40} height={40} src="/cross.svg" alt="Profile image" />
-        </a>
+        <button id="back-button" class="bg-transparent border-0 cursor-pointer p-0">
+          <Image class="mask mask-circle absolute top-0 right-0 m-3" format="svg" width={30} height={30} src="/cross.svg" alt="Profile image" />
+        </button>
 
         <div class="flex flex-col gap-4 w-full justify-center mx-5">
 
@@ -55,17 +56,17 @@ import { Image } from "@astrojs/image/components";
 
         </div>
 
-        <div class="absolute bottom-0 align-items-middle justify-center w-full h-auto py-10 space-y-4 flex-col bg-[#356262]">
+        <div class="absolute bottom-0 align-items-middle justify-center w-full py-5 space-y-4 flex-col bg-[#356262]">
             <!-- display svg icons of size 24 x 24 from the public folder -->
             <div class="flex w-full self-center space-x-7 h-auto justify-center ">
-                <a href="https://github.com/manuelernestog"><img src="/dribble.png" alt="github icon" width="18" height="18" /></a>
-                <a href="https://twitter.com/manuelernestog"><img src="/instagram.svg" alt="twitter icon" width="18" height="18" /></a>
-                <a href="https://twitter.com/manuelernestog"><img src="/linkedin.png" alt="twitter icon" width="18" height="18" /></a>
-                <a href="https://twitter.com/manuelernestog"><img src="/github.png" alt="twitter icon" width="18" height="18" /></a>
+                <a href="https://github.com/manuelernestog"><img src="/dribble.png" alt="github icon" width="25" height="25" /></a>
+                <a href="https://twitter.com/manuelernestog"><img src="/instagram.svg" alt="twitter icon" width="25" height="25" /></a>
+                <a href="https://twitter.com/manuelernestog"><img src="/linkedin.png" alt="twitter icon" width="25" height="25" /></a>
+                <a href="https://twitter.com/manuelernestog"><img src="/github.png" alt="twitter icon" width="25" height="25" /></a>
             </div>
             <div>
                 <p>
-                    <span class="text-orange-100 flex h-auto justify-center text-center self-center w-full text-sm">
+                    <span class="text-orange-100 py-3 flex h-auto justify-center text-center self-center w-full text-sm">
                         <a href="mailto:ahmedkamaleldin@gmail.com">ahmedkamaleldin@gmail.com</a>
                     </span>
                 </p>
@@ -84,10 +85,14 @@ import { Image } from "@astrojs/image/components";
         const overlay = document.getElementById("overlay");
         if (overlay.classList.contains("hidden")) {
             overlay.classList.remove("hidden")
-
-
         } else {
             overlay.classList.add("hidden");
         }
+    });
+
+    // New event listener to hide overlay when back button is clicked
+    document.getElementById("back-button").addEventListener("click", function() {
+        const overlay = document.getElementById("overlay");
+        overlay.classList.add("hidden");
     });
 </script>

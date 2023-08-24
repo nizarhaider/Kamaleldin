@@ -1,20 +1,19 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
+
 <div class="bg-[#422424]">
-<BaseLayout expandFooter="true" title="About" changeColour="true">
-  <div>
-    <div class="flex ml-2 mt-5">
-      <a href="/">
-        <img width="24" height="24" src="/back.png" alt="back--v1"/>
-      </a>
+  <BaseLayout expandFooter="true" title="About" changeColour="true">
+    <div class="px-4 py-5">
+      <div class="flex items-center space-x-3 md:space-x-5">
+        
+        <a href="/">
+          <img width="24" height="24" src="/back.png" alt="back--v1"/>
+        </a>
 
-      <a href="/" class="mr-3 text-slate-400"> Back</a>
-
-      <a href="/about" class="font-semibold text-[#E0D8BF]"> About</a>
+        <a href="/" class="text-sm md:text-base text-slate-400">Back</a>
+        <a href="/about" class="text-sm md:text-base font-semibold text-[#E0D8BF]">About</a>
+      </div>
     </div>
-
-    
-  </div>
-</BaseLayout>
+  </BaseLayout>
 </div>
