@@ -2,4 +2,4 @@
 // You can import this data from anywhere in your site by using the `import` keyword.
 
 export const SITE_TITLE = 'Kamaleldin | Personal Portfolio ';
-export const SITE_DESCRIPTION = 'My Personal Portfolio';
+export const SITE_DESCRIPTION = 'Personal Portfolio';
