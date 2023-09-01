@@ -17,11 +17,10 @@ const { image, title = SITE_TITLE, description = SITE_DESCRIPTION, isIndex = fal
   </head>
   <body class="scrollbar-thin scrollbar-thumb-[#E0D8BF] scrollbar-track-[#FFFFFF]  ">
     
-    <div class=" relative drawer lg:drawer-open">
+    <div class=" relative drawer lg:drawer-open ">
       {isIndex && <div id="animatedDiv" class="flex justify-center align-middle absolute overflow-hidden h-screen bg-teal-800 w-full z-30 opacity-100">
     
-        <div id="childDiv" class="justify-center align-middle self-center flex container columns-2 space-x-5 "
-        >
+        <div id="childDiv" class="justify-center align-middle self-center flex container columns-2 space-x-5 ">
 
         <div  class="w-auto h-auto "
         
@@ -58,7 +57,7 @@ const { image, title = SITE_TITLE, description = SITE_DESCRIPTION, isIndex = fal
 
 window.onload = function() {
   // Check if the animations have been played before
-  const animationsPlayed = localStorage.getItem('animationsPlayed');
+  const animationsPlayed = sessionStorage.getItem('animationsPlayed');
 
   if (isIndex == "true" && !animationsPlayed) {
     setTimeout(function() {
@@ -93,11 +92,10 @@ window.onload = function() {
     }, 5000);
 
     // Mark animations as played
-    localStorage.setItem('animationsPlayed', 'true');
+    sessionStorage.setItem('animationsPlayed', 'true');
   }
 
-  
-  else {
+  if (isIndex == "true" && animationsPlayed) {
     
        var parentElement = document.getElementById("animatedDiv");
         parentElement.classList.add("opacity-5", "duration-[300ms]");
@@ -108,9 +106,14 @@ window.onload = function() {
 
         var feedElement = document.getElementById("feed");
         feedElement.classList.remove("overflow-hidden","h-screen");
-        
-    
   }
+  else {
+      var parentElement = document.getElementById("animatedDiv");
+      var feedElement = document.getElementById("feed");
+      feedElement.classList.remove("overflow-hidden","h-screen");
+      parentElement.classList.add("hidden");
+  }
+  
 };
 
 
