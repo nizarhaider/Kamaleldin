@@ -5,7 +5,7 @@ description: "Edumize Educational Services"
 pubDate: "Sep 12 2022"
 heroImage: "/post_img.svg"
 badge: "Demo badge"
-tags: ["Prototyping", "UI/UX", "Graphic Design", "Design System"]
+tags: ["Prototyping", "UI/UX", "Graphic Design", "Design System", "Web Development"]
 ---
 
 ### Overview
