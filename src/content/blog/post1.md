@@ -67,13 +67,13 @@ Figma (Design), Webflow (Development)
 
 A detailed user persona was developed based on insights from prospective students and the client who provided an indepth insight through his experience. This persona guided design decisions, ensuring the website's content and features align with users' needs.
 
-![User Persona of targeted audience member](/path/to/placeholder/image.jpg)
+![User Persona of targeted audience member](/post1/post1a.png)
 
 ### Market Research
 
 A thorough analysis of competitors' websites in the education and consultancy sectors provided insights into design trends, user expectations, and opportunities for differentiation.
 
-![Market competitors](/path/to/placeholder/image2.jpg)
+![Market competitors](/post1/post1d.png)
 
 ## Design Process
 
@@ -81,13 +81,14 @@ A thorough analysis of competitors' websites in the education and consultancy se
 
 The design process began with wireframes that laid out the website's structure, content hierarchy, and user flows.
 
-![Wireframing the university application steps page](/path/to/placeholder/image3.jpg)
+![Wireframing the university application steps page](/post1/post1c.jpg)
+
 
 ### High-Fidelity Prototyping
 
 Figma was used to create high-fidelity interactive prototypes that showcased the visual design, animations, and user interactions.
 
-![High Fidelity design examples](/path/to/placeholder/image4.jpg)
+![High Fidelity design examples](/post1/post1b.png)
 
 ## User Testing
 
@@ -103,7 +104,7 @@ Insights from user testing were integrated into the design to refine user flows,
 
 The Edumize Educational Services website design journey involved in-depth research, meticulous design iterations, and user testing to create a visually captivating, user-friendly, and informative platform. By addressing challenges such as engaging a young demographic, seamless CMS integration, and multilingual support, I crafted a digital presence that aligns with Edumize's mission of providing excellent education consultancy services. As development progresses and the website transitions from beta testing to full launch, the high-fidelity design will be brought to life on the Webflow platform, empowering Edumize to make a positive impact on students' academic journeys. The established design system ensures the website's future scalability and adaptability, enabling ongoing improvements based on user feedback and emerging design trends.
 
-![Colors & Typography of the Design system](/path/to/placeholder/image5.jpg)
+![Colors & Typography of the Design system](/post1/Colours.png)
 
 ---
 
