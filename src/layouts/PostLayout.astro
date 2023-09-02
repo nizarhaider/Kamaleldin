@@ -1,6 +1,7 @@
 ---
 import { BlogSchema } from "../content/config";
 import BaseLayout from "./BaseLayout.astro";
+import Content from '../content/post1.md';
 import dayjs from "dayjs";
 import localizedFormat from "dayjs/plugin/localizedFormat";
 
@@ -25,7 +26,7 @@ import { Image } from "@astrojs/image/components";
 
         <a href="#" class="font-semibold text-[#E0D8BF]"> Edumize</a>
       </div>
-    <article class="max-w-full prose-img:mx-auto">
+    <article class="max-w-full prose prose-img:mx-auto">
        {
         heroImage && (
         <Image
@@ -39,7 +40,7 @@ import { Image } from "@astrojs/image/components";
         )
       } 
 
-      <h1 class="title my-2 text-4xl font-bold">{title}</h1>
+      <h1 class=" px-4 title my-2 text-4xl font-bold">{title}</h1>
       <!-- {pubDate && <time>{displayDate}</time>} -->
       <br />
       <!-- {badge && <div class="badge badge-secondary my-1">{badge}</div>} -->
@@ -51,8 +52,11 @@ import { Image } from "@astrojs/image/components";
           </div>
         )
       } -->
-      <div class="divider my-2"></div>
-      <slot />
+      <div class="divider px-4 my-2"></div>
+      <div class="px-4">
+        <slot />
+      </div>
+      
     </article>
   </main>
 </BaseLayout>
