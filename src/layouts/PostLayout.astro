@@ -1,6 +1,7 @@
 ---
 import { BlogSchema } from "../content/config";
 import BaseLayout from "./BaseLayout.astro";
+import Content from '../content/post1.md';
 import dayjs from "dayjs";
 import localizedFormat from "dayjs/plugin/localizedFormat";
 
@@ -25,7 +26,7 @@ import { Image } from "@astrojs/image/components";
 
         <a href="#" class="font-semibold text-[#E0D8BF]"> Edumize</a>
       </div>
-    <article class="max-w-full prose-img:mx-auto">
+    <article class="max-w-full prose prose-img:mx-auto">
        {
         heroImage && (
         <Image
@@ -52,7 +53,10 @@ import { Image } from "@astrojs/image/components";
         )
       } -->
       <div class="divider my-2"></div>
-      <slot />
+      <div class="px-4">
+        <slot />
+      </div>
+      
     </article>
   </main>
 </BaseLayout>
