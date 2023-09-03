@@ -11,101 +11,108 @@ tags: ["Prototyping", "UI/UX", "Graphic Design", "Design System"]
 
 ### Overview
 
-Edumize Educational Services is an agency dedicated to assisting students in their journey to study in Malaysia. Committed to providing a seamless and stress-free experience, Edumize offers personalized consultations, expert advice, and tailored solutions to help students choose the right educational program in Malaysia. The Edumize website serves as a digital platform to showcase the agency's offerings, provide essential information, and engage with prospective students. The website's main feature is an extensive catalog, a comprehensive database encompassing details about universities, institutes, and study programs, catering to the needs of prospective students. The website is currently undergoing beta testing and is available in both Arabic and English languages.
+Perlis Digital's SATU smart app is a digital solution developed exclusively for Perlis, Malaysia. The app serves as a comprehensive digital hub catering to the diverse payment needs of the state's residents. Built upon four pivotal pillars – digital government, digital community, digital economy, and digital tourism – the SATU app seamlessly integrates APIs to create a unified user interface. Designed as a super app, SATU offers a plethora of essential services presented as mini-apps to provide convenience to users.
+
 
 ### Keywords
 
-Product Design, User Experience, UI/UX Design, Web Development, CMS Integration, Animation, Design System, Multilingual Support, Catalog Database, Interaction Design, Webflow
+Product Design, Super App, Design System, Market Research, User Research, User Flow, Wireframing, User Experience, Visual Design, Prototyping, Interaction Design User Testing
 
 
 ## Current Status
 
-The high-fidelity design phase is complete, and the website is actively being developed on Webflow. The website is currently in the beta testing phase, incorporating user feedback for further refinement.
+The high fidelity design phase is complete, and the app is currently in the active development stage.
+
 
 ### Design Tools
 
-Figma (Design), Webflow (Development)
+Figma
 
 
-### Team and Collaborations
+<!-- ### Team and Collaborations -->
 
-- Product Designer (Me): Responsible for creating the user-centric design, wireframes, and high-fidelity prototypes.
-- Webflow & Web Developer (Nizar Haidar): Responsible for translating the design into a functional website using Webflow.
 
 ### Live Site
 
-[edumize.com](http://edumize.com)
+Non Available Yet.
 
 ## Challenges
 
-1. **Engaging Young Demographic**: Designing a playful and visually appealing website that resonates with the agency's young demographic while maintaining a professional tone.
+1. **User Technical Proficiency**: Adapting to the varying levels of user technical proficiency presents a significant challenge in ensuring an inclusive and user-friendly experience.
 
-2. **Easy-to-Use CMS**: Integrating a user-friendly Content Management System (CMS) that allows the client to update information and content without technical expertise.
-
+2. **API Integration**: The super app framework necessitates seamless API integration from diverse government and non-government sources across various mini-apps.
 3. **Seamless Animation**: Incorporating eye-catching animations that enhance the user experience without compromising page load times.
 
-4. **Multilingual Experience**: Ensuring a seamless and engaging user experience for both Arabic and English-speaking visitors.
+4. **Future Expansion**: The design must be flexible enough to accommodate future feature additions and integration of new mini-apps.
 
-5. **Design Consistency**: Developing a design system that ensures visual consistency and allows for easy scalability as the website evolves.
+
 
 ## Solutions
 
-1. **Vibrant Visual Design**: I opted for a vibrant color palette, playful typography, and custom illustrations to create a youthful and engaging visual identity.
+1. **Simplified User Experience**: By prioritizing a user-centric approach, the design aims to create an intuitive interface that caters to users of all technical backgrounds.
 
-2. **User-Centered Information Architecture**: The website's navigation and structure were meticulously planned to ensure easy access to essential information and services.
+2. **Standardized Interfaces**: Uniform interface design principles are applied to all mini-apps, streamlining categorization and organization of services and APIs.
 
-3. **Webflow CMS Integration**: The website was developed on Webflow, providing the client with an intuitive CMS to update content, add new pages, and manage resources.
+3. **Robust Design System**: A comprehensive design system is established to facilitate the seamless integration of new features while maintaining visual consistency.
 
-4. **Subtle Animations**: Delicate animations were strategically implemented to enhance user engagement and guide visitors' attention without overwhelming the browsing experience.
-
-5. **Multilingual Interface**: The website was designed with a focus on multilingual support, offering a seamless transition between Arabic and English content to cater to the client’s targeted audience.
-
-6. **Design System Implementation**: A comprehensive design system was established, encompassing typography, color schemes, UI components, and interaction patterns for consistent design implementation.
 
 ## Research
 
 ### User Research
 
-A detailed user persona was developed based on insights from prospective students and the client who provided an indepth insight through his experience. This persona guided design decisions, ensuring the website's content and features align with users' needs.
+Leveraging insights from the client's user research analysis, the design process focuses on addressing user requirements and challenges identified during the analysis. Clients research has also showen that many users are concerned about their wallet balance always being visible on the apps home screen.
 
-![User Persona of targeted audience member](/post1/post1a.png)
+<!-- ![User Persona of targeted audience member](/post1/post1a.png) -->
 
 ### Market Research
 
-A thorough analysis of competitors' websites in the education and consultancy sectors provided insights into design trends, user expectations, and opportunities for differentiation.
+A thorough competitive analysis was conducted to evaluate analogous state apps and super apps in Malaysia. The examination yielded valuable insights into successful design elements, wallet flows, and navigation strategies.
 
-![Market competitors](/post1/post1d.png)
+![design solutions and ideas for inspiration from compitition](/PerlisDigital/Competitors.png)
 
 ## Design Process
 
-### Wireframe Development
+Following comprehensive user and market research, user flows and wireframes were meticulously crafted. These visualizations depicted the step-by-step user journey and provided a skeletal framework of the app's layout, accommodating a diverse range of user needs and technical capabilities.
 
-The design process began with wireframes that laid out the website's structure, content hierarchy, and user flows.
+![Wireframing Profile & settings](/PerlisDigital/Wireframe.jpeg)
 
-![Wireframing the university application steps page](/post1/post1c.jpg)
+![Low fidelity prototype of mobile top up flow](/PerlisDigital/LowFidelity.png)
+
+### Visual Design and Prototyping
+
+Transcending wireframes, the visual design phase harmoniously integrated brand elements, color schemes, typography, and iconography into a high-fidelity Prototype. Focusing on both aesthetic appeal and user-friendliness, the design aimed to create a seamless interface. The use of Figma allowed for the development of interactive prototypes, facilitating user interaction testing to validate and refine the user flows.
+
+![High fidelity prototype of mobile top up flow](/PerlisDigital/PaymentHighFidelity.png)
+
+![Final High fidelity Prototype](/PerlisDigital/FinalHighFidelity.png)
 
 
-### High-Fidelity Prototyping
+<!-- ### High-Fidelity Prototyping
 
 Figma was used to create high-fidelity interactive prototypes that showcased the visual design, animations, and user interactions.
 
-![High Fidelity design examples](/post1/post1b.png)
+![High Fidelity design examples](/post1/post1b.png) -->
 
 ## User Testing
+Stakeholder testing played a pivotal role in refining the SATU app's design. Their feedback and insights guided iterative adjustments to ensure a user-centric and accessible design. Currently, a diverse group of users, representing varying technical backgrounds, are interacting with the interactive prototypes for user testing. 
 
-### Usability Testing
+![Design Evolution (Even the logo evolved during the design process 😂)](/PerlisDigital/DesignEvolution.png)
 
-A group of prospective students interacted with the interactive prototypes to evaluate the user-friendliness, navigation, and overall experience.
+<!-- ### Usability Testing
 
-### Feedback Incorporation
+A group of prospective students interacted with the interactive prototypes to evaluate the user-friendliness, navigation, and overall experience. -->
 
-Insights from user testing were integrated into the design to refine user flows, improve navigation, and optimize user interactions.
+### Future Expansion and Design System
+
+Anticipating future growth, a comprehensive design system was established. This system encompassed standardized UI components, guidelines for visual consistency, and best practices for accommodating new features, ensuring the app remains adaptable and user-focused.
+
+![Design System setup](/PerlisDigital/DesignSystem.png)
 
 ## Conclusion
 
-The Edumize Educational Services website design journey involved in-depth research, meticulous design iterations, and user testing to create a visually captivating, user-friendly, and informative platform. By addressing challenges such as engaging a young demographic, seamless CMS integration, and multilingual support, I crafted a digital presence that aligns with Edumize's mission of providing excellent education consultancy services. As development progresses and the website transitions from beta testing to full launch, the high-fidelity design will be brought to life on the Webflow platform, empowering Edumize to make a positive impact on students' academic journeys. The established design system ensures the website's future scalability and adaptability, enabling ongoing improvements based on user feedback and emerging design trends.
+In conclusion, the Perlis Digital SATU Super App's design journey encompassed extensive research, iterative design, and user testing. Addressing challenges such as user diversity and API integration, the design team created a versatile and user-friendly super app. As development progresses, the high fidelity design will be tested by users, poised to serve as an essential digital hub for Perlis residents, continuously evolving based on user feedback and emerging trends.
 
-![Colors & Typography of the Design system](/post1/Colours.png)
+<!-- ![Colors & Typography of the Design system](/post1/Colours.png) -->
 
 ---
 

@@ -1,20 +1,115 @@
 ---
-title: "Demo Post 3"
-colab: "Edumize Educational Services"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+title: "Tavern DAO Design System and Scholarships page Redesign"
+colab: "Tavern DAO"
+description: "Tavern Dao, a new player in the Blockchain/Web3 gaming space, embarked on a transformative journey to enhance its website user experience and cater to its tech-savvy gamer audience."
 pubDate: "Sep 12 2022"
-heroImage: "/tavern.png"
+heroImage: "/TavernDAO.svg"
 badge: "Demo badge"
-tags: ["UI"]
+tags: ["Product Design", "Blockchain", "Web3", "Design System", "UI/UX Redesign", "Visual Design"]
 
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+### Overview
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
+Tavern Dao, a new player in the Blockchain/Web3 gaming space, embarked on a transformative journey to enhance its website user experience and cater to its tech-savvy gamer audience. As the Product Designer tasked with the initiative, I undertook the task of creating a cutting-edge design system for the website and revamping the Scholarships feature page – a pivotal component of Tavern Dao's blockchain solution.
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
+### Keywords
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.
+Product Design, Blockchain, Web3, Design System, UI/UX Redesign, Scholarships, Tech-Savvy Gamers, Visual Design, DAOs
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
+
+## Current Status
+
+The design system has been successfully developed, and the redesigned Scholarships feature is now in the implementation backlog.
+
+### Design Tools
+
+Figma
+
+
+### Team and Collaborations
+
+Collaborated closely with Tavern Dao's development team and stakeholders to align design goals with technological capabilities and user needs.
+
+### Live Site
+
+[edumize.com](http://edumize.com)
+
+## Challenges
+
+1. **Audience Alignment**: Tavern Dao's existing design lacked resonance with its tech-savvy gamer audience, necessitating a fresh design approach to captivate and engage users effectively.
+
+2. **Fragmented Design**: The absence of a design system led to inconsistency in user interface elements and compromised the overall user experience.
+
+3. **Scholarships page Enhancement**: The Scholarships feature, a cornerstone of Tavern Dao's offering, required an elevated design to provide a seamless and engaging experience, while providing options for the more hardcore users.
+
+
+## Solutions
+
+1. **User-Centric Aestheticsn**: Focusing on user preferences and gaming culture, I developed a design that resonated with Tavern Dao's target audience, blending modern aesthetics and gamification elements.
+
+2. **Holistic Design System**: I meticulously crafted a comprehensive design system encompassing standardized UI components, typography, color schemes, and interaction guidelines. This design system facilitated a consistent and cohesive user experience across Tavern Dao's ecosystem.
+
+3. **Scholarships Redesign**: Through iterative design and usability research, I revitalized the Scholarships feature webpage with a high-fidelity design. Enhanced visuals, intuitive navigation, and seamless interactions were integrated to ensure a captivating user journey. In addition, the scholarships list provides an option for a tabular view for the hardcore users.
+
+
+## Research
+
+### User Research
+
+Leveraged stakeholders insights to understand the preferences and expectations of tech-savvy gamers. Their feedback guided design decisions to create an engaging and immersive experience.
+
+<!-- ![User Persona of targeted audience member](/post1/post1a.png) -->
+
+### Market Research
+
+Conducted a thorough analysis of competitors in the blockchain and gaming space to identify successful design patterns, interface elements, and user engagement strategies. Simple and unconventional with rich visuals; is my best description of the trends in web3 design. 
+
+![A representation of the design trends of UI in web3](/TavernDAO/Competitors.jpg)
+
+## Design Process
+
+### Visual Design
+
+Infused modern aesthetics and gaming elements into the Scholarships design, aligning with Tavern Dao's brand identity and the preferences of the target audience.
+
+![Default card view of scholarships page](/TavernDAO/CardView.png)
+
+![Tabular card view of scholarships page](/TavernDAO/TabularView.png)
+
+
+### Prototyping
+
+Developed interactive prototypes using Figma, allowing stakeholders and users to engage with the redesigned Scholarships feature and provide valuable insights.
+
+<!-- ![High Fidelity design examples](/post1/post1b.png) -->
+
+## Design System
+
+Developed a comprehensive design system encompassing:
+
+- Standardized UI components (buttons, cards, forms, etc.)
+- Typography guidelines for consistent readability and hierarchy
+- Color palette to ensure cohesive brand representation
+- Interaction guidelines to maintain uniform user experiences
+
+![Design system](/TavernDAO/DesignSystem.png)
+
+<!-- ## User Testing
+
+### Usability Testing
+
+A group of prospective students interacted with the interactive prototypes to evaluate the user-friendliness, navigation, and overall experience.
+
+### Feedback Incorporation
+
+Insights from user testing were integrated into the design to refine user flows, improve navigation, and optimize user interactions. -->
+
+## Conclusion
+
+The Tavern Dao Design System and Scholarships page Redesign project brought forth a user-centric design approach that resonated with the tech-savvy gamer demographic. By establishing a robust design system and revitalizing the Scholarships feature, the project addressed challenges of design inconsistency and user engagement. As the implementation phase commences, the design system will serve as a guiding light, ensuring Tavern Dao's future endeavors adhere to a unified design language and create seamless experiences for its users.
+
+<!-- ![Colors & Typography of the Design system](/post1/Colours.png) -->
+
+---
+
