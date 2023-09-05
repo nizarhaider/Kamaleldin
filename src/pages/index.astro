@@ -89,7 +89,7 @@ const uniqueTags = [...new Set(posts.map((post) => post.data.tags).flat())];
       </div>
       
         {
-          last_posts.map((post) => (
+          posts.map((post) => (
             <div class="post relative  transition-opacity duration-300 hover:bg-opacity-80" data-tags={post.data.tags.join(',')}>
 
              
