@@ -1,20 +1,116 @@
 ---
-title: "Demo Post 3"
-colab: "Edumize Educational Services"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+title: "FOX Asset - Maintenance Management System"
+colab: "FOX Asset"
+description: "FOX Asset, a maintenance management system provider based in Johor, Malaysia, sought to revamp their outdated user interface and design."
 pubDate: "Sep 12 2022"
-heroImage: "/persatu.png"
+heroImage: "/FOXAsset.svg"
 badge: "Demo badge"
-tags: ["UI"]
+tags: ["Product Design", "Maintenance Management", "User Experience", "Design System", "Usability Research", "Rapid Prototyping", "UI/UX"]
 
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+### Overview
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
+FOX Asset, a maintenance management system provider based in Johor, Malaysia, sought to revamp their outdated user interface and design. As the dedicated Product Designer, my role was to reimagine the system's frontend, establish a design system, and improve user experience through a combination of design upgrades, usability research, and prototyping, All while trying to keep the excising developed skeleton of the systems front end.
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
+### Keywords
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.
+Product Design, Maintenance Management, User Experience, Design System, Usability Research, Rapid Prototyping, UI/UX
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
+
+
+## Current Status
+
+The design system and prototype have been successfully implemented, improving the user experience and design consistency across the FOX Asset maintenance management system.
+
+### Design Tools
+
+Figma
+
+
+### Team and Collaborations
+
+- Collaboration with FOX Asset's development team to ensure seamless implementation of the new design system.
+- Regular feedback sessions with stakeholders and end-users to gather insights and refine design choices.
+
+### Live Site
+
+[foxmy.io](foxmy.io/)
+
+## Challenges
+
+1. **Inconsistant Design**: The existing design lacked a cohesive style and consistency, leading to confusion and inefficiencies for users.
+
+2. **No Design Guidelines**: Absence of a design system hindered developers' ability to maintain a consistent design language.
+
+3. ** Frontend Dependencies**: Excessive frontend dependencies contributed to slow loading speeds, impacting user satisfaction.
+
+
+## Solutions
+
+1. **Design System Creation**: A comprehensive design system was developed to provide a unified design language, ensuring consistent visuals and interactions across the system.
+
+2. **User-Centered Redesign**: The design focused on user needs, simplifying complex workflows and emphasizing user-friendly interactions.
+
+3. **Frontend Optimization**: Superfluous frontend dependencies were identified and replaced with lightweight components, enhancing loading speed and user experience.
+
+
+## Research
+
+### User Research
+
+Leveraging insights from the client's user research analysis, the design process focuses on addressing user requirements and challenges identified during the analysis.
+
+<!-- ![User Persona of targeted audience member](/post1/post1a.png) -->
+
+### Market Research
+
+Studied competitors' maintenance management systems to identify best practices and design trends in the industry. The result of this research concluded that there yet to be clear user experience design best practices in this industry yet. In addition, the competitors in the market still cary on with outdated designs of user interfaces. However, there seem to be a trends starting to form with the use of Modals as they have proven to improve the users experience.
+
+![Market competitors](/FOX/Competitors.png)
+
+## Design Process
+
+The clients request of maintaining the existing structure of the systems front end, and their need for rapid development of the prototype provided a need to skiping the Low fidelity stage and jumping directly into high fidelity design.
+
+
+### Design System
+
+Established a set of design principles including color palette, typography, and iconography for a consistent visual identity.
+
+![Colors & Typography of the Design system](/FOX/BaseDesignSystem.png)
+
+
+### UI Components & Organisms
+
+Created an extensive library of UI components & organisms, each documented with usage guidelines to streamline development.
+
+![Components of the Design system](/FOX/Components.png)
+![Organisms of the Design system](/FOX/Organisms.png)
+
+
+### Prototype Development
+
+Utilized Figma to develop the required high-fidelity interactive prototypes, enabling stakeholders and users to visualize and test the new design.
+
+![High fidelity design depicting the use of modals in two of the system flows](/FOX/HighFidelity1.png)
+
+## User Testing
+
+- The Client conducted their own user testing sessions on the interactive prototypes to gather user feedback and validate design decisions.
+- I then iteratively refined the design based on the client analyses, ensuring optimal user experience.
+
+## Future Expansion and Maintenance
+
+1. *Scalability*: The design system provides a foundation for future feature enhancements, ensuring new functionalities integrate seamlessly into the existing design.
+
+2. *Ongoing Maintenance*: Regular design reviews and updates to the design system will maintain design consistency and accommodate evolving user needs.
+
+## Conclusion
+
+The FOX Asset Maintenance Management System's design transformation involved a systematic approach to address challenges and improve user experience. By establishing a robust design system, analysing the cients thorough research, and implementing user-centered design choices, the redesigned system now offers a streamlined and user-friendly experience, setting the stage for continued growth and enhancement. The collaborative effort between myself and the development teams has resulted in a cohesive, modern, and efficient maintenance management solution that meets user needs and exceeds expectations.
+
+<!-- ![Colors & Typography of the Design system](/post1/Colours.png) -->
+
+---
+
