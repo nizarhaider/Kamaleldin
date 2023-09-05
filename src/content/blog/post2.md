@@ -6,7 +6,7 @@ state's residents."
 pubDate: "Sep 12 2022"
 heroImage: "/PerlisDigital/Perlis.svg"
 badge: "Demo badge"
-tags: ["Prototyping", "UI/UX", "Graphic Design", "Design System"]
+tags: ["UI/UX", "Graphic Design", "Design System"]
 ---
 
 ### Overview

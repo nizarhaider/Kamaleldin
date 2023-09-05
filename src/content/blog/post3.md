@@ -5,7 +5,7 @@ description: "Tavern Dao, a new player in the Blockchain/Web3 gaming space, emba
 pubDate: "Sep 12 2022"
 heroImage: "/TavernDAO.svg"
 badge: "Demo badge"
-tags: ["Product Design", "Blockchain", "Web3", "Design System", "UI/UX Redesign", "Visual Design"]
+tags: ["Product Design", "Blockchain", "Design System", "UI/UX", "Visual Design"]
 
 ---
 

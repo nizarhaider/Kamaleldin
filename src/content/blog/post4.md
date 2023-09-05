@@ -5,7 +5,7 @@ description: "FOX Asset, a maintenance management system provider based in Johor
 pubDate: "Sep 12 2022"
 heroImage: "/FOXAsset.svg"
 badge: "Demo badge"
-tags: ["Product Design", "Maintenance Management", "User Experience", "Design System", "Usability Research", "Rapid Prototyping", "UI/UX"]
+tags: ["Product Design", "Design System", "Usability Research", "Rapid Prototyping", "UI/UX"]
 
 ---
 
