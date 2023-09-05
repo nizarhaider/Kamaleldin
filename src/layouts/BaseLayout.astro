@@ -20,22 +20,21 @@ const { image, title = SITE_TITLE, description = SITE_DESCRIPTION, isIndex = fal
     <div class=" relative drawer lg:drawer-open ">
       {isIndex && <div id="animatedDiv" class="flex justify-center align-middle absolute overflow-hidden h-screen bg-teal-800 w-full z-30 opacity-100">
     
-        <div id="childDiv" class="justify-center align-middle self-center flex container flex-col lg:columns-2 space-x-5 ">
+    <div id="parentDiv" class="flex items-center justify-center">
 
-        <div  class="w-auto h-auto "
-        
-        >
-            <Image class="mask mask-circle " aspectRatio="1:1" format="webp" width={150} height={150} src="/profile.svg" alt="Profile image" />
-        </div>
+<div class="flex items-center justify-center space-x-5">
+    <div class="w-auto h-auto">
+        <Image class="mask mask-circle" aspectRatio="1:1" format="webp" width={150} height={150} src="/profile.svg" alt="Profile image" />
+    </div>
 
-        <div id="childDiv" class="block  align-middle self-center text-center  w-auto h-auto"
+    <div class="text-center">
+        <p class="font-normal text-[#E0D8BF] text-3xl">Ahmed <span class="font-bold text-[#E0D8BF]">Kamal Eldin</span></p>
+        <p class="font-extralight text-white text-base font-sans">Digital Products Designer and Developer</p>  
+    </div>
+</div>
 
-        >
-          <p class="font-normal text-[#E0D8BF] text-3xl ">Ahmed <span class="font-bold text-[#E0D8BF]">Kamal Eldin</span> </p>
-          <p class="font-extralight text-white text-base font-sans">Digital Products Desiger and Developer</p>  
-        </div>
+</div>
 
-        </div>
         <div class="absolute bottom-0  w-full">
           <SideBarFooter expandFooter="true" changeColour={changeColour}/>
         </div>
@@ -59,65 +58,68 @@ window.onload = function() {
   // Check if the animations have been played before
   const animationsPlayed = sessionStorage.getItem('animationsPlayed');
 
-  if (isIndex == "true" && !animationsPlayed) {
+  const isInternalReferral = document.referrer && document.referrer.indexOf(window.location.origin) !== -1;
+
+  if (isIndex == "true" && !animationsPlayed && !isInternalReferral) {
+    
     setTimeout(function() {
-        var parentElement = document.getElementById("animatedDiv");
-        parentElement.classList.remove("w-full");
-        parentElement.classList.add("w-[40vw]", "transition-all", "duration-[1200ms]");
+      var parentElement = document.getElementById("animatedDiv");
+      parentElement.classList.remove("w-full");
+      parentElement.classList.add("w-[40vw]", "transition-all", "duration-[1200ms]");
     }, 2000);
 
     setTimeout(function() {
-        var parentElement = document.getElementById("animatedDiv");
-        parentElement.classList.add("opacity-5", "duration-[1200ms]");
+      var parentElement = document.getElementById("animatedDiv");
+      parentElement.classList.add("opacity-5", "duration-[1200ms]");
     }, 2900);
 
     setTimeout(function() {
-        var childDiv = document.getElementById("childDiv");
-        childDiv.classList.add("opacity-20", "duration-[1000ms]");
+      var childDiv = document.getElementById("childDiv");
+      childDiv.classList.add("opacity-20", "duration-[1000ms]");
     }, 2000);
 
     setTimeout(function() {
-        var childDiv = document.getElementById("childDiv");
-        childDiv.classList.add("-translate-y-[40vh]", "-translate-x-[6vw]", "transition-all","scale-50", "duration-[1000ms]");
+      var childDiv = document.getElementById("childDiv");
+      childDiv.classList.add("-translate-y-[40vh]", "-translate-x-[10vw]", "transition-all","scale-50", "duration-[1000ms]");
     }, 2000);
 
     setTimeout(function() {
-        var parentElement = document.getElementById("animatedDiv");
-        parentElement.classList.add("hidden");
+      var parentElement = document.getElementById("animatedDiv");
+      parentElement.classList.add("hidden");
     }, 5000);
 
     setTimeout(function() {
-        var feedElement = document.getElementById("feed");
-        feedElement.classList.remove("overflow-hidden","h-screen");
+      var feedElement = document.getElementById("feed");
+      feedElement.classList.remove("overflow-hidden","h-screen");
     }, 5000);
 
     // Mark animations as played
     sessionStorage.setItem('animationsPlayed', 'true');
+
+    // Mark animations as played
+    sessionStorage.setItem('animationsPlayed', 'true');
   }
+  else if (isIndex == "true" && (animationsPlayed || isInternalReferral)) {
+    var parentElement = document.getElementById("animatedDiv");
+    parentElement.classList.add("opacity-5", "duration-[300ms]");
+    setTimeout(() => {
+      parentElement.classList.add("hidden");
+    }, 400);
 
-  if (isIndex == "true" && animationsPlayed) {
-    
-       var parentElement = document.getElementById("animatedDiv");
-        parentElement.classList.add("opacity-5", "duration-[300ms]");
-        setTimeout(() => {
-          parentElement.classList.add("hidden");
-        }, 400);
-        
-
-        var feedElement = document.getElementById("feed");
-        feedElement.classList.remove("overflow-hidden","h-screen");
+    var feedElement = document.getElementById("feed");
+    feedElement.classList.remove("overflow-hidden", "h-screen");
   }
   else {
-      var parentElement = document.getElementById("animatedDiv");
-      var feedElement = document.getElementById("feed");
-      feedElement.classList.remove("overflow-hidden","h-screen");
-      parentElement.classList.add("hidden");
+    var parentElement = document.getElementById("animatedDiv");
+    var feedElement = document.getElementById("feed");
+    feedElement.classList.remove("overflow-hidden", "h-screen");
+    parentElement.classList.add("hidden");
   }
-  
 };
 
-
 </script>
+      
 
   </body>
 </html>
+

@@ -7,11 +7,7 @@ import { Image } from "@astrojs/image/components";
 import { motion } from "framer-motion"
 
 const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-<<<<<<< Updated upstream
 const last_posts = posts.slice(0, 4);
-=======
-// const last_posts = posts.slice(0, 3);
->>>>>>> Stashed changes
 const uniqueTags = [...new Set(posts.map((post) => post.data.tags).flat())];
 // const shouldRender = !localStorage.getItem('animationsPlayed');
 
