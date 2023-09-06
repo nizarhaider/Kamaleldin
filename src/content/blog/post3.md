@@ -33,7 +33,7 @@ Collaborated closely with Tavern Dao's development team and stakeholders to alig
 
 ### Live Site
 
-[edumize.com](http://edumize.com)
+[taverndao.io](https://taverndao.io/)
 
 ## Challenges
 
