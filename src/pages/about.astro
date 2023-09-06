@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import {Content as Aboutme} from '../components/aboutme.md';
+
 ---
 
 <div class="bg-[#422424]">
@@ -13,6 +15,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
         <a href="/" class="text-sm md:text-base text-slate-400 ">Back</a>
         <a href="/about" class="text-sm md:text-base font-semibold text-[#E0D8BF]">About</a>
+      </div>
+      <div class="prose prose-headings:text-white prose-p:text-white prose-ul:text-white prose-strong:text-white prose-a:text-blue-500 mt-8 px-5">
+        <Aboutme />
       </div>
     </div>
   </BaseLayout>
