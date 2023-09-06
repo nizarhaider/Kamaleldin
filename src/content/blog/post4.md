@@ -9,7 +9,7 @@ tags: ["Product Design", "Design System", "Usability Research", "Rapid Prototypi
 
 ---
 
-### Overview
+## Overview
 
 FOX Asset, a maintenance management system provider based in Johor, Malaysia, sought to revamp their outdated user interface and design. As the dedicated Product Designer, my role was to reimagine the system's frontend, establish a design system, and improve user experience through a combination of design upgrades, usability research, and prototyping, All while trying to keep the excising developed skeleton of the systems front end.
 
@@ -39,20 +39,20 @@ Figma
 
 ## Challenges
 
-1. **Inconsistant Design**: The existing design lacked a cohesive style and consistency, leading to confusion and inefficiencies for users.
+1. *Inconsistant Design*: The existing design lacked a cohesive style and consistency, leading to confusion and inefficiencies for users.
 
-2. **No Design Guidelines**: Absence of a design system hindered developers' ability to maintain a consistent design language.
+2. *No Design Guidelines*: Absence of a design system hindered developers' ability to maintain a consistent design language.
 
-3. ** Frontend Dependencies**: Excessive frontend dependencies contributed to slow loading speeds, impacting user satisfaction.
+3. *Frontend Dependencies*: Excessive frontend dependencies contributed to slow loading speeds, impacting user satisfaction.
 
 
 ## Solutions
 
-1. **Design System Creation**: A comprehensive design system was developed to provide a unified design language, ensuring consistent visuals and interactions across the system.
+1. *Design System Creation*: A comprehensive design system was developed to provide a unified design language, ensuring consistent visuals and interactions across the system.
 
-2. **User-Centered Redesign**: The design focused on user needs, simplifying complex workflows and emphasizing user-friendly interactions.
+2. *User-Centered Redesign*: The design focused on user needs, simplifying complex workflows and emphasizing user-friendly interactions.
 
-3. **Frontend Optimization**: Superfluous frontend dependencies were identified and replaced with lightweight components, enhancing loading speed and user experience.
+3. *Frontend Optimization*: Superfluous frontend dependencies were identified and replaced with lightweight components, enhancing loading speed and user experience.
 
 
 ## Research
@@ -68,6 +68,7 @@ Leveraging insights from the client's user research analysis, the design process
 Studied competitors' maintenance management systems to identify best practices and design trends in the industry. The result of this research concluded that there yet to be clear user experience design best practices in this industry yet. In addition, the competitors in the market still cary on with outdated designs of user interfaces. However, there seem to be a trends starting to form with the use of Modals as they have proven to improve the users experience.
 
 ![Market competitors](/FOX/Competitors.png)
+*<center>Market competitors</center>*
 
 ## Design Process
 
@@ -79,6 +80,7 @@ The clients request of maintaining the existing structure of the systems front e
 Established a set of design principles including color palette, typography, and iconography for a consistent visual identity.
 
 ![Colors & Typography of the Design system](/FOX/BaseDesignSystem.png)
+*<center>Colors & Typography of the Design system</center>*
 
 
 ### UI Components & Organisms
@@ -86,7 +88,11 @@ Established a set of design principles including color palette, typography, and 
 Created an extensive library of UI components & organisms, each documented with usage guidelines to streamline development.
 
 ![Components of the Design system](/FOX/Components.png)
+*<center>Components of the Design system</center>*
+
+
 ![Organisms of the Design system](/FOX/Organisms.png)
+*<center>Organisms of the Design system</center>*
 
 
 ### Prototype Development
@@ -94,6 +100,7 @@ Created an extensive library of UI components & organisms, each documented with 
 Utilized Figma to develop the required high-fidelity interactive prototypes, enabling stakeholders and users to visualize and test the new design.
 
 ![High fidelity design depicting the use of modals in two of the system flows](/FOX/HighFidelity1.png)
+*<center>High fidelity design depicting the use of modals in two of the system flows</center>*
 
 ## User Testing
 

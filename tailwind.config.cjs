@@ -8,9 +8,9 @@ module.exports = {
       sm: '1rem',
       base: '0.8rem',
       xl: '1.25rem',
-      '2xl': '1.563rem',
+      '2xl': '1.45rem',
       '3xl': '2.05vw',
-      '4xl': '2rem',
+      '4xl': '2.8rem',
       '5xl': '4vw',
     }
   },
