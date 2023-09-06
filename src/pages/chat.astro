@@ -129,32 +129,23 @@ function handleClick() {
     const name = document.querySelector('input[name="name"]');
     const email = document.querySelector('input[name="email"]');
 
-    // Handle clicks on the button.
     button.addEventListener('click', (event) => {
-        event.preventDefault();  // Prevent any default action
-        const message = messageInput.value.trim();
-        console.log(message);
+    event.preventDefault();  // Prevent any default action
+    const message = messageInput.value.trim();
+    
+    // URL encode the message
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Replace with your phone number
+    const phoneNumber = "+601156356752";  // Replace this with the desired phone number
+    
+    // Construct the WhatsApp URL
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    
+    // Redirect to WhatsApp
+    window.location.href = whatsappUrl;
+});
 
-        setTimeout(function() {
-            var chatContainer = document.getElementById("chat-container");
-            var chatForm = document.getElementById("chat-form");
-
-            chatContainer.classList.remove("h-1/6");
-            chatContainer.classList.add("h-1/2", "transition-all", "duration-[700ms]");
-            chatForm.classList.add('hidden');
-            const userMessageElement = document.getElementById('userMessage');
-            userMessageElement.innerText = message;
-
-        }, 0); // The delay time for parent element in ms
-
-        setTimeout(function() {
-            var second = document.getElementById("second");
-
-            second.classList.remove("hidden");
-            
-        }, 700); // The delay time for parent element in ms
-
-    });
 
     button2.addEventListener('click', (event) => {
         event.preventDefault();  // Prevent any default action
