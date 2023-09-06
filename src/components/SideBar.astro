@@ -28,7 +28,8 @@ const { sideBarActiveItemID, expandFooter, changeColour, page_title, title } = A
   <aside class={" h-auto min-h-full w-[40vw]  text-base-content flex flex-col" + (changeColour ? " bg-[#623D3D]" : " bg-teal-800")}>
     <div class="px-5 "> 
       <!-- First Row -->
-      <div class={title=="About"? "flex-grow text-center px-4 py-2 " : "columns-2 gap-4 flex justify-between items-center py-6   "}>
+      <a  href="/">
+      <div class={title=="About"? "flex-grow text-center px-4 py-2 " : "columns-2 gap-4 flex justify-between items-center py-6   "} >
         <div class={title=="About"? "flex justify-center  mb-3":""}>
           <!-- Profile Image -->
               {title=="About"? <Image class="mask mask-circle" aspectRatio="1:1" format="webp" width={150} height={150} src="/profile.svg" alt="Profile image" />: <Image class="mask mask-circle " aspectRatio="1:1" format="webp" width={50} height={50} src="/profile.svg" alt="Profile image" />}
@@ -38,6 +39,7 @@ const { sideBarActiveItemID, expandFooter, changeColour, page_title, title } = A
           <p class="font-normal text-white text-lg">Ahmed <span class="font-bold ">Kamal Eldin</span> </p>
           <p class="font-extralight text-white text-base font-sans">Digital Products Desiger and Developer</p>
         </div>
+      </a>
       </div>
 
       <!-- Second Row -->

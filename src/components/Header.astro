@@ -5,8 +5,8 @@ import { Image } from "@astrojs/image/components";
 <!-- Navbar & Profile Section -->
 <div class="sticky lg:hidden top-0 z-30 flex-col h-auto w-full justify-center bg-opacity-90 backdrop-blur transition-all duration-100 bg-base-100 text-base-content shadow-sm">
     <div class="navbar bg-teal-800 px-5">
-        
-            <div class="width-2/3 justify-content flex-start">
+        <a  href="/">
+            <div class="width-2/3 justify-content items-center flex flex-start">
                 <!-- Profile Image -->
                 <Image class="mask mask-circle" format="svg" width={40} height={40} src="/profile.svg" alt="Profile image" />
             
@@ -16,6 +16,7 @@ import { Image } from "@astrojs/image/components";
                 <p class="font-extralight text-white text-base font-sans flex  whitespace-nowrap">Digital Products Desiger and Developer</p>
             </div>
             </div>
+        </a>
             
         <div class="navbar-center"></div>
         <div class="navbar-end">
