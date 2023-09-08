@@ -46,7 +46,7 @@ Figma
 
 ## Location-Centric Approach
 
-At the heart of my concept lies a location-centric approach. By harnessing the user's real-time location, we aim to place them firmly on the map, where they can explore chat rooms in their immediate vicinity. This innovative method ensures that users are effortlessly connected to discussions happening right around them, facilitating meaningful connections within their local community.
+At the heart of my concept lies a location-centric approach. By harnessing the user's real-time location, I aim to place them firmly on the map, where they can explore chat rooms in their immediate vicinity. This innovative method ensures that users are effortlessly connected to discussions happening right around them, facilitating meaningful connections within their local community.
 
 ![Location-Centric Approach](/Voicechatroom/LocationVacinity.png)
 *<center>Location-Centric Approach</center>*
@@ -77,7 +77,7 @@ In addition to localized chats, my concept unveils the heartbeat of the city. It
 
 ## Conclusion
 
-This case study is a testament to our passion for innovation and our commitment to redefining how we connect through audio communication. We invite you to explore this captivating journey with us as we push the boundaries of mobile app design, fostering stronger connections, and enhancing community engagement.
+This case study is a testament to our passion for innovation and our commitment to redefining how we connect through audio communication. I invite you to explore this captivating journey with me as I push the boundaries of mobile app design, fostering stronger connections, and enhancing community engagement.
 
 <!-- ![Colors & Typography of the Design system](/Voice chat room/club-house-app.png) -->
 
