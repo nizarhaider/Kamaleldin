@@ -3,9 +3,9 @@ title: "Groupify: Empowering University Students with Seamless Team Management -
 colab: "KamalEldin"
 description: "While universities have made concerted efforts to integrate group work into their curricula, a gap exists in adequately preparing students for proficient team management practices and tools."
 pubDate: "Sep 12 2022"
-heroImage: "/Voice-Chat.svg"
+heroImage: "/Groupify.svg"
 badge: "Demo badge"
-tags: ["Product Design", "Conceptual Design", "Usability Research", "Mobile App", "UI/UX"]
+tags: ["Product Design", "Conceptual Design", "Usability Research", "Flutter", "Software Engineering"]
 
 ---
 
@@ -16,7 +16,7 @@ In today's fast-paced corporate world, effective team management tools are indis
 
 ### Keywords
 
-Product Design, Mobile App, User Experience, User Engagement, Team Management, Collaboration Tool, Teamwork, Usability Research, Requirements Elicitation, UI/UX
+Product Design, Mobile App, User Experience, User Engagement, Team Management, Collaboration Tool, Teamwork, Usability Research, Requirements Elicitation, UI/UX, Flutter, Firebase, Firestore
 
 
 
@@ -33,11 +33,17 @@ Adobe XD
 
 Flutter, Firebase, VSCode, XCode
 
+### Github repository
+https://github.com/kamaleldincom/Groupify
+
 
 
 ## Project Context  
 
 ### Project Aim
+
+![Mobile app design](/Groupify/GroupifyHF.png)
+*<center>Mobile app design</center>*
 
 I embarked on the Groupify project as a mobile team management tool tailored specifically for university students. Its primary aim is to address the following key objectives:
 
@@ -55,7 +61,13 @@ The project is guided by the following objectives:
 I started with comprehensive gathering of requirements for the Groupify project management and collaboration system.
 
 #### (b) Design and Architecture
-I was responsible for creating architectural models, databases, and user interfaces that align with Groupify's mission.
+I created architectural models, diagrams, databases, and user interfaces that align with Groupify's mission.
+
+![Use Case Diagram](/Groupify/usecasediagram.png)
+*<center>Use Case Diagram</center>*
+
+![An Instance of Activity diagrams for inviting project members](/Groupify/ActivityDiagram.png)
+*<center>An Instance of Activity diagrams for inviting project members</center>*
 
 #### (c) Development
 I took on the task of developing Groupify based on the elicited requirements and designed models.
@@ -86,6 +98,9 @@ For me, Groupify represented a pivotal tool in the transformation of university 
 
 - Fair and Transparent Assessment: Groupify provides a structured platform for educators to evaluate student group work, ensuring fairness and transparency in the grading process.
 
+![Project Dashboard showcasing users progress and contribution metrics.](/Groupify/ProjectDash.png)
+*<center>Project Dashboard showcasing users progress and contribution metrics.</center>*
+
 
 ## Methodology  
 
@@ -96,12 +111,18 @@ The development of Groupify was grounded in comprehensive research:
 
 - Market Research: A thorough examination of competitors in the education and consultancy sectors informed design choices, identifying opportunities for differentiation.
 
+![Some of the Market Competitors included in the research](/Groupify/Competitors.png)
+*<center>Some of the Market Competitors included in the research</center>*
+
 
 ## Design Process
 
 - *Wireframe Development*: The project commenced with meticulous wireframing, mapping out the application's structure, content hierarchy, and user flows.
 
 - *High-Fidelity Prototyping*: I used Figma to create high-fidelity interactive prototypes that showcased the visual design, animations, and user interactions.
+
+![Splach and Landing page design](/Groupify/SplashLanding.png)
+*<center>Splach and Landing page design</center>*
 
 
 ## Development Process 
@@ -114,11 +135,17 @@ To bring the project to life, I leveraged the following tools and technologies:
 
 - *Flutter (Dart)*: Flutter, a versatile and efficient framework, was chosen as the development platform. Its key advantage is the ability to develop simultaneously for both iOS and Android operating systems. This ensured broader accessibility and a streamlined development process.
 
-- *Firestore (Firebase)*: Firestore was utilized for tasks such as authentication and file storage. Its capabilities perfectly complemented the requirements of the application.
+- *Firestore (Firebase)*: Firestore, a NoSql database solution, was utilized for tasks such as authentication and file storage. Its capabilities perfectly complemented the requirements of the application.
+
+![Database design for the NoSql database](/Groupify/NoSqlDB.png)
+*<center>Database design for the NoSql database</center>*
 
 
 ### Architecture and Methodology
 The development process adhered to the Model-View-ViewModel (MVVM) architectural pattern. MVVM promotes a clear separation of concerns and facilitates modular development, making it an ideal choice for ensuring maintainability and scalability of the application.
+
+![Model-View-ViewModel (MVVM) architectural pattern design](/Groupify/Architecture.png)
+*<center>Model-View-ViewModel (MVVM) architectural pattern design</center>*
 
 
 ### Key Development Milestones
@@ -156,10 +183,6 @@ Insights from user testing were seamlessly integrated into the design to optimiz
 The Groupify project represents a transformative venture in product design, aiming to revolutionize the way university students engage in teamwork and collaboration. By addressing challenges such as complexity in team management tools and the gap in preparing students for the modern workforce, Groupify stands poised to make a significant impact. As development progresses and the application transitions from beta testing to full launch, it is set to empower students and educators alike, preparing them for a future that increasingly values collaboration, efficiency, and adaptability.
 
 
-
-<button class="bg-[#122447] hover:bg-gradient-to-r from-[#122447] to-[#B1BACC] text-white py-3 px-4 font-normal " onclick="window.location.href = 'mailto:ahmed@kamaleldin.com';">
-           Want to make this a Reality? <span class="font-semibold underline">Let's Collaborate</span>
-</button>  
 
 
 ---
